@@ -26,7 +26,7 @@ Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Fig
 ```{r nice-tab, tidy=FALSE,echo=FALSE}
 knitr::kable(
   head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = FALSE
+  booktabs = FALSE, format = c("pandoc")
 )
 ```
 
