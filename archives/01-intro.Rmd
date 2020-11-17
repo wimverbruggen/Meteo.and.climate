@@ -1,0 +1,176 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Introduction, Energy and Light {#intro}
+\chaptermark{Intro}
+
+## The earth's atmosphere
+
+The atmosphere and changes in the atmosphere are central in this course.
+
+### The earth' spheres
+
+The **atmosphere** is the air above the earth surface (for several km) which interacts with all the other spheres (pedosphere – soil, hydrosphere – water, cryosphere – ice on land, anthroposhere – part of the earth controlled by humans and biosphere – biotic part of the earth).
+
+We will talk about the atmosphere and its interaction with the biosphere (last part of this course) but also its interaction with the hydrosphere, pedosphere and cryosphere. 
+
+Links between the different spheres are made though fluxes of energy, water, gases (e.g. CO2) and the biogeochemical cycles. 
+
+### The atmosphere's composition
+
+The atmosphere/air is gas mixture of almost 80% N2 and more than 20% O2. There are also some noble gases which, together with N2 and O2, are present at constant concentrations in the atmosphere (no mather where on eath you take an air sample). That’s why they are called **permanent gases** in the atmosphere.
+
+In the contrary, the **variable gases** are present in really low concentrations (< 0.1 volume percentage except for H2O vapor which can vary considerably between 0 and 4 volume percentages). The other variable gases, which depend on the location on earth and time of the day, have variable concentrations. These are some **greenhouse gases** such as H2O, CO2, CH4, N2O and O3. It is important to know that greenhouse gases such as CO2 are present in very low concentrations (4 ppm < 1%) but nevertheless have a very large impact on radiation balance of the earth and thus climate change. We can also find **aerosols** suspended in the air and CFKs which are responsible for the hole in the ozon layer (again, low concentrations but very reactive).
+
+Very important for weather is **water** in the atmosphere. It is the gas in the atmosphere which is present at the most variable concentrations. It is continuously present in the atmosphere in three phases: as a gas (water vapour), solid particles (ice – high white clouds) and liquid particles (water droplets – lower gray clouds). But it is also an important greenhouse gas (in abundance the most important greenhouse gas but it has not shown the recent exponential increasing trend like CO2 and CH4). But most importantly, H2O is responsible for a very large part of the energy transfer on the planet through phase transitions (latent heat). Evaporation of water consumes a lot of energy while condensation of water releases a lot of energy. 
+
+**Aerosols** are all tiny solid and liquid suspended particles in the atmosphere which play a very important role as condensation nuclei for cloud formation but also have an impact on radiation balance. They can originate from anthropogenic (e.g. industry) sources and natural sources (e.g. volcanic eruptions). They cause the so-called global dimming effect. Generally, they are present in low concentrations but these concentrations vary strongly in space and time depending on different individual events or trends such as volcanic eruptions or industrial activities (the latter is cause cleaner air in Europe and more aerosols over China over the past decade). 
+
+### The atmosphere's layers
+
+Because of gravity almost all air particles are in the first km above the earth surface. The air becomes very thin very fast. The **air density** will decrease exponentially with height. The **air pressure** will decrease exponentially because air pressure is the weight of the air above it. If you are on top of the mount Everest (5.5 km high) you are above 50% of the air molecules. In this way we can look at the atmosphere vertically.
+
+However, in meteorology we mostly look at **the vertical temperature profile**. Based on this profile the atmosphere is divided in layers. One of the only ways to measure a vertical temperature profile is to use a radiosonde (i.e. weather balloon). Typically, the temperature declines when the balloon goes higher till it reaches -50°C at an altitude of around 10 km (airplanes fly at this height). The temperature declines in this first layer (the **troposphere**) because the sun heats the surface, so the further from the surface the colder it gets. The altitude where the temperature eventually stops decreasing is called the **tropopause**. Above the tropopause there is a **permanent temperature inversion** where the temperature will increase with height, which is called the **stratosphere**. The inversion is caused by the ozone layer, where ozone captures UV-radiation of the sun, heating up the layer from the top to the bottom. The stratosphere is a very stable layer with cold air the bottom and warm air at the top (no turbulence, no transfer between layers – lid on the troposphere, see chapter on atmospheric stability). Troposphere is most important for us because this is where the weather is. Everything we will discuss in this course are variations in the troposphere. You don’t have any cloud formation above the tropopause. The stratosphere/inversion reaches till 50 km high where there is again a stabilisation and the temperature will decrease with the height again (**mesosphere**). Eventually we reach the **thermosphere** where the temperature increases very quickly because molecules will react very strongly with incoming solar radiation, and solar winds. Dependent on the solar activity the temperature curve will look differently (there is no buffer effect from the stratosphere here). 
+
+**Homosphere** is the lower part of the atmosphere where the chemical composition is very constant (except ozone in ozone layer) while in the **heterosphere** is very variable because of the interaction with solar radiation.
+
+10 km is the average **thickness of the troposphere**. Because of the earth rotation the height of the tropopause is highest at the equator (18 km) and lowest at the poles. This thickness also varies with the seasons, in the summer (in the NH) there is an expansion of the lower layer because there is more warming of the earth surface. Therefore, the highest clouds found in Belgium are at around 10 km high while in the tropics this will be almost double the height (till 18 km high) and at the poles only 6 or 7 km high.
+
+## Meteorology and ecoclimatology
+
+### Difference bteween weather and climate
+
+What is the difference between weather & climate?  Both terms are pointing at the condition of the atmosphere, the difference lies in the temporal perspective. **Weather** is about the short term, the variation in the atmosphere from day to day, within days. **Climate** is average weather (e.g. “what is the average temperature in September in Belgium”, “How will this climate vary from month to month, over the years”). Climate change is a directional change of the average weather (e.g. “Is our climate becoming on average warmer?”) within timescales of decades, centuries. 
+
+If the figure below presents the probability function of temperature (or wind speed or air humidity), then in meteorology we want to know where we are on this curve next Tuesday for example. We want to predict or understand why it was 25 °C yesterday and will be 15°C next Tuesday. Climatology is what is the shape of this curve for our city, where is the average for our city and how do the tails look for our city. If we study climate change, then we want to know if the curve will shift, will the shape change, will the average T be higher in our city, will the chance to have extreme temperatures change in time? So, there is a difference in perspective. Weather models want to predict where exactly we are on this curve, while climate models want to predict how this full curve will look at the end of the century, and not where we will be on the curve on the 25 of October 2098. 
+
+
+
+### History of meteorology
+
+**Aristotle** was a philosopher but also the first meteorologist who wrote a **descriptive book** (Meteorologica – “everything that happens in the air”) about clouds but also about falling stars and celestial bodies. The **next step** happened more than one thousand years later with the invention of **measuring equipment**. Galilei was the first person who made an instrument to measure the temperature, the thermoscope (bubbles that rise or descend in liquids depending on the temperature). Several decades later the barometer was invented. This evolved till we had a set of instruments to measure weather variables and we could start to continuously measure weather (first observations in Ukkel in 1833). Then the first **computers** evolved to super computers and were used quite rapidly for weather predictions and climate modelling. After the second world war the first **radars** were used for cloud observation and **weather satellites** were launched. Today, ground observations are still key and are combined with remote sensing and simulation models. What we see in weather reports is based on the combination of these different components (e.g. weather stations, remote sensing, climate models). Finality of the part meteorology in this course is reading and interpreting weather maps that synthesize al key weather elements. 
+
+### Weather and climate in our daily lives
+Weather and climate are very important and determine a lot of aspects in our lives (e.g. agriculture, forestry, environmental issues, housing, economy, clothing) especially extreme events as well as day to day weather.
+
+### Ecoclimatology
+
+**Ecoclimatology** is an interdisciplinary science which links ecology and climatology. It is about the link between ecosystems and the climate, between the biosphere and the atmosphere and especially it is about the interactions. These interactions are determined by fluxes of energy, water and chemical elements which are exchanged between the vegetation on the earth surface and the atmosphere. 
+
+In the ecoclimatology part of the course, we are going to talk about biogeography, how does the climate determine which vegetation occurs on certain places on the planet, but also about the impact of climate variations on crops, plants, natural ecosystems and what are the feedbacks (how do ecosystems affect the climate in their term). We will also discuss and use vegetation models, which are important tools to study these interactions. 
+
+### History of Ecoclimatology
+
+**Ecoclimatology** is a younger and less developed scientific branch which started with Theoprasthus (student of Aristotle) who wrote a descriptive, observational book about plants and where they were found, linked with weather patterns of that place. In the 1800s (when measurements were possible), Alexander **von Humboldt** was the first one who really made the link between climate and the presence of certain plants. Later, others continued his work (e.g. vegetation zones, Köppen classification) and now there is also a lot of modelling.  
+
+### Biogeoscience
+
+**Biogeoscience** is closely related to ecoclimatology and is situated on the intersection of the different spheres and studies interactions between the different spheres. A lot of the current environmental issues/problems have to be studied within the biogeosciences, especially when we want to look at the anthropogenic impact.
+
+
+A good example of the role of vegetation in land-atmopshere interactions is the given by forests. Forest provide ecosystem services, but these are dependent on the type of forest (e.g. a tropical rainforest versus a boreal forest will affect the climate in different ways). For example, the impact on the albedo (reflectivity earth surface) will be greater when a boreal forest grows than the contribution of a tropical forest. In the contrary, the evaporation and carbon storage of one hectare of tropical forest will be greater than one hectare of boreal forest ((-) cooling effect (+) warming effect). 
+
+### Key land-atmosphere interactions
+
+Interaction between land and climate has an influence on a lot of biophysical processes. The reflectivity (**albedo**) of the earth surface will influence the energy balance. The **roughness** of the earth surface is determined by the type of vegetation, causing different wind patterns and turbulence, which in its turn impacts the **heat and gas exchange**. The physiology of the stomata of plants will have an influence on **water exchange**. Soil moisture will also have an impact. The **carbon cycle** has an impact on the CO2 in the atmosphere and will depend on the type of vegetation. **Nitrogen exchange** (N-deposition from industry or N2O as greenhouse gas from soils) will be different in an agricultural area compared to a forest. **Aerosols** will determine the solar radiation a forest gets which has an impact on photosynthesis and the carbon balance. Forests will also emit **volatile organic carbons** (e.g. isoprene a lot in tropical forests) which are precursors of aerosols, so forests have an impact on the amount of aerosols in the atmosphere (also when a forest burns this brings a lot of particles in the air). Ecoclimatology studies many of these elements. 
+
+## Energy, temperature and heat
+### Definitions
+**Energy** is defined as the capacity to do work. Potential (static) and kinetic energy (dynamic) are types of energy. Energy can take on different forms. **Temperature** is a measure for kinetic energy (e.g. air temperature is the kinetic energy of the air molecules in our atmosphere). Therefore, making an energy balance is essential to understand the climate. **Heat** is the exchange, transfer of energy from one medium to another, it is a flux of energy. 
+
+### Temperature
+
+Temperature is a **measure for kinetic energy** (e.g. how much will the molecules collide with each other and against the edges of the volume it is confined in). Temperature is measured in ° Celsius, Fahrenheit, Kelvin (most scientific scale). The average temperature on earth is typically 15 °C, but weather stations typically measure variations between -30 °C up to 40 °C. 
+
+### Specific heat
+
+Different media which exist in natural systems can have very different specific heats expressed as J per kg per °C, it is the amount of energy needed to increase the temperature of 1 kg of a substance with 1 °C (e.g. a rock or sand will heat up faster than ice or wet soil -- see table x). Water needs a very high amount of energy to heat up 1 °C (you need four times more energy to heat up a kg of water than a kg of air). Ice needs less energy than liquid water which is important for the climate system (e.g. oceans heat up slower than land and humid areas have a large buffering capacity). This is also why there is so much heat transfer involved with evaporation and condensation of water (latent heat).
+
+### Latent and sensible heat
+
+**Sensible heat** is the energy used to change the temperature of the air. Sensible heat flux can be measured by a temperature change. **Latent heat** is the energy used to change the phase of a substance while the temperature does not change (e.g. energy needed to evaporate water or melt ice). **Evaporation is a cooling process** for the environment because the substance takes up heat from the environment to evaporate while **condensation is a warming process** for the environment because the process releases heat to the environment. Important to understand these concepts to understand the climate system (e.g. when a cloud forms water vapor will condensate to form water droplets which is accompanied by a release of energy to the environment.)
+
+### Heat transfer in the atmosphere
+There are three ways in which heat is transferred in the atmosphere: **convection, conduction and radiation**. Radiation is based on radiation from the sun or other objects (every object with a temperature higher than 0 K emits radiation). Radiation does not heat the medium, air (imagine feeling the radiative heat of the sun on your skin on a cold winter day). Convection is the transfer heat via a fluid which is typically air in meteorology (hot air bubbles which are moving to transfer energy in the atmosphere). Convection does heat the medium. Conduction is heat transfer through a solid substance. This can be neglected in meteorology because air has a really low heat conductivity. There is only a small amount of heat that is transferred via conduction from the soil to the first layers of air above it. The largest heat fluxes on earth are governed by radiation and convection.
+
+
+**Convection** happens when the sun heats a specific spot on the earth (for example a dark plowed field that heats up more than the grassland surrounding it), the air above this hot surface heats up and this hot air bubble rises and moves in the atmosphere (**thermal**). A lot of the energy transfer on earth happens through these thermals, through convection. This is not the same as **advection** which is the horizontal transfer of any property, this can be energy  a gas or pollutants (e.g. cold air or pollutant sliding of a mountain) while convection is the three dimensional transfer of heat through hot air bubbles.
+
+## Radiation
+
+Radiation is electromagnetic waves which don’t heat the medium (air). Direct sun rays lose almost no energy before reaching earth. The **wavelength** of radiation determines its energy. A quantum of light with a high frequency (short wavelength) has more energy than one with a high wavelength. 
+
+### Important laws
+
+A first important law describes the energy of a photon (ep) with a certain wavelength (lambda): 
+
+Secondly, **Planck’s law** relates the radiant flux density per unit wavelength emitted by a black body (W m-2 m-1) to the wavelength (lambda) and temperature (T) (e.g. spectrum of the sun when you fill in T of the sun):
+
+Thirdly, **Wien’s displacement law** relates the wavelength of maximum emission to the temperature of a black body:
+
+Lastly, the **Stefan-Boltzmann law** relates the radiant flux density emitted by an object (E) to its temperature obtained by integrating over all wavelengths: 
+
+These laws are summarized in the figure which gives the spectrum of emitted energy for the sun and the earth (unit: W m-2 µm-1 -- the energy intensity per spectral band  spectral intesity). The curve is determined by the temperature of the sun (6000 K) and earth (288 K) (Planck’s law). The colder the object the longer the wavelength at which this maximum energy intensity is reached (Wien’s law). The amount of total radiation is given by the surface under the curve (Stefan-Boltzmann law). The sun emits **shortwave** radiation (lambda max at 0.5 µm) while the earth emits **longwave** (invisible) radiation (lambda max at 10 µm) (both short and longwave radiation are important radiation components). Thus, the sun emits compared to the earth, radiation of a different quality and quantity. 
+
+### The sun’s EM spectrum
+
+This figure shows the percentages of solar-energy in the different wavelength bands. Almost everything is infrared (37+11) and visible light (44). Only a few percentages are UV light, however, containing a lot of energy (ozon layer protects us from this). This is the spectrum that reaches the earth before entering the atmosphere.
+
+### Absorption, reflection and transmission
+
+Once the radiation enters the atmosphere, there is a lot of interaction of the radiation with the molecules in the atmosphere and the earth surface (this changes the nice curve from before). The radiation can be reflected, absorbed or transmitted (e.g. light transmitted through the leaves of a tree).  
+
+### Scattering
+
+Scattering happens when the sun rays collide with molecules and are reflected resulting in diffuse radiation. There are two mayor ways of diffusion. Firstly, **Rayleigh scattering** is the scattering of light by gas molecules which have a smaller diameter than the wavelength of the light. This is a continous form of scattering of which the intensity is inversely proportional to the wavelength ( ~ lambda-4). So, short wave lengths (high energy) will be scattered more than long wavelengths. This is the reason blue light is scattered more and the sky looks white at noon looking straight at the sun, blue when not looking straight at it and red in the evening (looking straight at the sun) as all the blue light is already scattered away. Secondly there is **Mie scattering**, which is the scattering of light by molecules with a diameter larger than the wavelength of the light (e.g. aerosols, water droplets in clouds, ice, smoke). For Mie scattering, the intensity is not proportional to the wavelength, every wavelength is scattered equally in all directions (this is why clouds look white or grey).
+
+### Direct and diffuse radiation
+
+The **shortwave direct** (Sh) and **diffuse** (Sd) **radiation** coming from the sun are measured with a **pyranometer**. This sensor measures the total shortwave radiation (St=Sh+Sd) in watts per square meter, so the radiation measured is also dependent on the solar angle (low angles, greater spread over the surface). When using a pyranometer which tracks the solar activity and always measures the direct shortwave radiation perpendicular (Sb), we correct for the solar elevation (β): Sh=Sb x sinβ.  On average we would measure 740 Watt/m2 at noon on a sunny day in Belgium.
+
+This figure shows the shortwave radiation coming from the sun measured at the earth surface (during a cloudy day). Compared to the radiation measured at the top of the atmosphere certain wavelengths have vanished. These wavelengths were absorbed by molecules in the air. The energy quantity coming from diffuse radiation is typically less than the energy coming from direct radiation. The quality is also different, the peak in diffuse radiation can be found in the shorter wavelengths (blue light). Plants can efficiently use these wavelengths present in diffuse radiation.
+
+These figures present the sensitivity of the human eye and the sensitivity of plants to light. Plants typically absorb (pigments in the leaf) blue and red light and less green light which is why they look green. This total spectrum is slightly different than the spectrum which the human eye is sensitive to but it spans the same wavelengths (400 nm -700 nm). **PAR (photosynthetic active radiation)** is the radiation within these wavelengths which plants can use for photosynthesis (µmol photons m-2 s-1). This is approximately half of the incoming shortwave radiation. However, this also depends on whether the radiation is direct or diffuse and the solar elevation.  In diffuse radiation there is relatively more PAR radiation and at lower solar elevations there is relatively less PAR radiation. On a sunny day there can be 2000 µmol m-2 s-1 PAR radiation. The PAR fraction in diffuse and direct light depends on the solar elevation (Table) at lower solar elevation the path length through the atmosphere of (especially direct) light is longer, blue light is scatter out, less PAR remains. 
+
+### Selective absorbers/emitters
+
+The spectrum of light that we receive at the surface of the earth looks different than the spectrum received at the top of the atmosphere because of selective absorbers. This figure shows the different **absorption spectra** for different gas molecules in the atmosphere. Ozon mainly absorbs UV light but also infrared light (making it a greenhouse gas). **Greenhouse gases** typically absorb infrared light. CO2, N2O but also water vapor and methane absorb a lot of infrared radiation. When we look at the total spectrum we see that a lot of wavelengths are filtered out before they can reach the earth surface. The visible light does reach the earth surface while UV (short wavelengths) and a lot of infrared radiation (coming from the sun but also from the earth) are absorbed. The **atmospheric window** (a zone with little absorption) is the group of infrared wavelengths that can leave the earth surface and the atmosphere again (this is how the earth loses energy via longwave radiation). However, this atmospheric window can be closed by clouds which is why a clear night is cooler than a cloudy night.
+
+### Greenhouse effect
+
+When there would be no greenhouse effect (no selective absorbers), the earth would lose a lot of infrared radiation and the average temperature on earth would be -18°C. Luckily, there are greenhouse gases which cause this greenhouse effect resulting in a livable temperature (15°C on average) on earth. However, the problem is the increased greenhouse effect and not the greenhouse gases as such. 
+
+## Energy balance
+### Radiation balance
+
+When making an energy balance of the planet, we consider the solar constant. This is the energy that we continuously receive from the sun at the top of the atmosphere (=  on average during the day we would measure at the top of the atmosphere 1360 W per square meter). 
+
+As we have seen before, when this energy from the sun enters our atmosphere there is interaction with molecules in the atmosphere (diffusion, reflection, etc). Firstly we make a radiation balance and secondly we make an energy balance. When making the radiation balance we calculate how much radiation energy the earth, or for example a grassland, receives and loses. We are calculating the **net radiation**, what is left at the earth surface. The radiation balance is made up off a shortwave ((1-α) St ) and a longwave radiation balance (Ld – σ T04).  The shortwave balance is the total shortwave radiation you measure with a pyranometer minus the reflected shortwave radiation. The reflected shortwave radiation is determined by the **albedo** (α), the reflectivity of the earth surface. The longwave balance is the balance of infrared longwave radiation. There is longwave radiation because objects with a temperature higher than 0 K emit radiation and relatively cold objects (such as the clouds and molecules in the atmosphere (Ld) and the earth surface (σ T04)) emit longwave radiation. Finally, the net radiation balance is: 
+
+The net radiation (the energy the system receives – energy the system loses) is the radiation which is available for the system to for example heat the air or for evaporation.
+
+The **albedo**, the reflectivity of the earth surface, is variable and depends on the color of a surface. Forests (dark) and water surfaces have a low albedo (they absorb a lot) while snow has a really high albedo (reflects a lot). Albedo measured with satellites (e.g. MODIS albedo) show us that the highest albedos can be found in places covered with snow and ice or in the desert, while places with a lot of vegetation like forests in the tropics or temperate areas have a low albedo.
+
+The next two figures are examples of the diurnal cycle of the components of the radiation balance, where we can see the different components change during the day. At night there is no shortwave radiation from the sun. When the sun rises the incoming shortwave radiation increases reaching a maximum at noon. The reflected shortwave radiation is a fraction (α) of the incoming shortwave radiation. The outgoing and incoming longwave radiation are quite constant (increasing a little bit when the surface and air heat up during the day). Most importantly, there is a **longwave deficit**, which means less longwave radiation is received than lost. So, during the night the earth is losing energy (no incoming shortwave, only longwave deficit) while during the day energy is won, when the net shortwave radiation (surface between the two shortwave curves) is larger than the longwave deficit. 
+
+When we make the **radiation balance** for the planet with incoming solar constant equalling 100 units, we see that only 51 units will reach the earth because 30 units are reflected in the atmosphere, by clouds or the earth surface and 19 units are absorbed by the atmosphere and clouds. This is the average radiation balance of the earth (because there is a large variation in local rardiation balances for different places and at different moments in time). 
+
+### Energy balance
+
+The net radiation we calculate from the radiation balance is part of the input of the energy balance.
+
+The **energy balance of the earth** describes what happens with the **net radiation** that the earth receives from the sun. So on the left side we have the energy gain and on the right side we have the energy loss. You can make this energy balance for an object (house, the hman body, …), an ecosystem, for a region or for the whole planet. Another energy input could be metabolism but this is neglected in an ecosystem because the metabolic energy (for example from photosynthesis and respiration reactions) is only a small fraction of the total energy. The energy input is measured with a **net radiation sensor**. Energy is lost through **latent heat** (λE, evaporation), **sensible heat** (H, increasing air temperature), through the **ground heat flux** (G, increasing soil temperature) or it is **stored** in the system (S, residual storage term because difficult to measure). These components are expressed in Watt per square meter or energy flux per second (W m-2 or J s-1 m-2). The latent and sensible heat are measured using the eddy covariance (see later in this course). Depending on the vegetation and water availability more energy will go to evaporation or increasing the air temperature. This is why a forest is cooler as more energy goes to evaporation than heating the forest compared to other systems with less vegetation. So, the energy balance is based on the conservation of energy (energy gained has to go somewhere). On the long term the ground heat flux and the storage term can be neglected in the energy balance as everything that is taken up during the summer is released during the winter.
+
+This figure shows the average energy balance of the planet which is more or less in balance. It is not in balance in certain places or on certain points of time, this is why we continuously have temperature and weather variations. But on average the system is quite stable with a net balance at different levels (at the top of the atmosphere, at the earth surface). The shortwave balance is the shortwave energy received and reflected (like in the radiation balance) but the longwave balance also includes the latent and sensible heat in addition to the longwave radiation. 
+
+The energy budget can be considered in different ways (see figures, say the same thing but with different numbers). The last figure is not based on 100 units of solar radiation coming in, but on 341 W m-2 which is the average incoming solar radiation over a full year globally.
+
+So the energy balance of the earth is on average in balance but this **balance can shift (Climate change)**. Climate change (natural or anthropogenic) is always related to one of three factors: **radiation, atmospheric chemistry and albedo**. Solar radiation (the input of the energy balance) can change in time when the sun is more or less active, or because of changes in the geometry of the earth and the sun (i.e. Milankovich cycles). The atmospheric composition can change which is mainly related to anthropogenic factors, greenhouse gases, but also aerosols. The albedo, the reflectivity of the earth surface, can change in time (vegetation cover, urbanisation, melting polar ice caps). So the energy balance is in balance when considering years but can change on the long term.
+
+However, locally there is no balance (there is an **imbalance according to latitude**). Locally, we receive more energy at the tropics and less at the poles. Long wave deficit is larger at the equator because the surface is hotter but net we still get more energy at the equator and lose energy at the poles. So there is a continuous surplus at the tropics and deficit at the poles. Therefore, there are continuous heat transfers from the equator to the poles which drives the climate system. 
+
+## Extra: Aurora borealis
+Polar light is a phenomenon which you can observe in northern areas (aurora borealis) or on the south pole (aurora australis). It is a visual effect related to the magnetic field of the earth. Solar storms emit charged particles. These particles are deflected and reach the atmosphere near the poles. They react with molecules in the atmosphere which then are excited. When the electrons fall back, they emit light (polar light). 

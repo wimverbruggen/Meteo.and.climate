@@ -1,4 +1,256 @@
-# (PART) In case we need parts {-}
-
 # Temperature, humidity and clouds
 \chaptermark{Temp}
+
+## Seasonal temperature variation
+
+Temperature is a measure for the **kinetic energy** of the atmosphere (more energy in the atmosphere, means a higher temperature). We’re going to talk about the variations in temperature, the seasonal, diurnal and spatial temperature variations.
+
+### Seasons: why?
+
+There are seasons on earth because of the variation in solar radiation in time. The main driving factor is the **tilted axis of the earth** (the earth’s axis is not perpendicular to the plane of the earth’s orbit around the sun, but is tilted). This results in a variation of the amount of solar radiation throughout the year but also depending on the location on earth. The amount of solar radiation depends on the **solar angle** (lower sun, solar radiation is spread over a larger surface, lower solar intensity and more scattering) and on the **day light hours**. Both of these factors are determined by the tilt of the earth’s axis and the geometry of the earth’s path around the sun. This path is elliptical (so the earth is not always at a same distance from the sun). It is the tilt which causes the seasons e.g. during summer here (northern hemisphere), we are furthest away from the sun but tilted towards the sun which causes a higher insolation (due to the solar angle and day light hours). During the spring and autumn we are closer to the sun. The figure here is an exaggeration of the elliptical path, in reality it looks more like a circle which is compressed just a little. Moreover, the sun is not located in the center of the ellipse so during the winter we are closer to the sun than during the summer (in NH). This might all be counterintuitive but shows that this distance to the sun is less important than the inclination of the earth’s axis. You would expect that in the southern hemisphere the seasons are more pronounced because they are closer to the sun during summer and further away during the winter, however, this is compensated by the fact that the **southern hemisphere is covered by a larger amount of water which acts as a buffer**. Therefore, seasonality in temperature is less pronounced in the Southern hemisphere.
+
+```{r Sun, fig.cap='Figure caption',echo=FALSE}
+knitr::include_graphics(c('figures/Figure22.png'))
+```
+
+If the earth axis wouldn’t be tilted, there wouldn’t be any seasons. Every day would be the same, would be like 20th of March or the 22nd of September. But this is not the case, there is an inclination of about 23,5° which can vary a little over the years (see course Climate Change Processes). 
+
+On the 21st of June the angle of 90° is above the tropic of Cancer while on the 22nd of September it is above the equator and on the 21st of December it is above the tropic of Capricorn causing the dynamics of the seasons.
+
+Above the polar circles there is also a special situation where during the summer the north pole has 24 hours daylight while during the winter it has none. So exactly on the poles there’s six months of day and six months of night but going further away from the poles the shorter the polar night.
+
+### Impact on insolation
+
+The above described variations have an impact on the total solar radiation which is available. This is calculated from the intensity multiplied by the daylength. The **intensity depends on the solar angle and the daylength** also depends on the solar geometry. The figure presents the insolation throughout the year for different locations on earth (different latitudes). At 60°N (a little more north than Belgium) we can see a typical strong **seasonal pattern** of insolation. When going to the north pole (90°N) this pattern is more extreme (six month with and without insolation). At 30°N (region around the Sahara), there is also strong seasonality but there is not a deep decline in winter due to the high solar angles. On the equator (0°N), and everywhere between the tropic of Cancer and the tropic of Capricorn (= the **tropics**), there is a completely different pattern, a **bimodal pattern**, because the sun is perpendicular to the equator at two times (September and March). On the equator the two peaks are nicely divided but going to the tropics the peaks come closer to the 21st of June. This is the resulting seasonality in insolation but this does not mean the temperatures will follow the same pattern. The temperature is not only determined by the incoming solar radiation but also by all the other factors of the radiation balance.
+
+This figure shows the situation on the 21st of June (summer solstice). The blue line presents the insolation at the top of the atmosphere while the red line presents the insolation at the earth’s surface, for the different latitudes. At the top of the atmosphere the insolation increases from the equator to 23.5°N where the sun is perpendicular to the earth (so mainly the solar angle is the driving factor here). Going further north the solar angle decreases again but the length of the day increases causes the total insolation to keep increasing. At the poles there is an extra increase because there is 24 hours sun there. Therefore the highest insolation over a day is reached at the north pole. However, at the earth surface the insolation decreases after the initial peak because with a lower solar angle comes longer paths through the atmosphere and a lot of scattering. At the poles there is also a lot of reflection from the polar caps (losing insolation). Clouds also play a role, they are the reason why the insolation increases between 23.5°N and 30°N, because there are no clouds above the deserts lying in between these latitudes while at 23.5°N there were clouds.
+
+The **radiation balance** is in balance globally but not locally and not **according to latitude**. The net shortwave radiation is shown in blue which is high at the equator and decreases to the poles. The longwave radiation loss is shown in red and has two peaks at 23.5°N and 23.5°S as these are the warmest regions (see Stefan-Boltzmann). This results in a net **surplus at the equator** and a **deficit at the poles**. To compensate, a continuous flux of energy is needed from the equator to the poles which is realised through **ocean currents, wind circulation and latent heat** (more evaporation at the equator and more condensation at the poles). These three component each transport 1/3 of the energy. 
+
+
+### Apparent path of the sun
+
+If we look at the geometry of the path of the earth around the sun from the perspective of someone standing on the earth surface, we can see the apparent path of the sun. If you stand on the north pole you see the sun going in a circle, with this circle descending when winter is coming closer. The closer to the equator the more perpendicular the sun will relative to the earth. At the equator the sun will apparently rise straight up with a little variation to the north or south depending on the time of the year. This also causes the fact that in the tropics the transition between day and night will be very fast.
+
+### Solar geometry
+
+We can also quantify solar elevation by using the **zenith angle**, this is the angle between the zenith (line perpendicular on the earth surface) and the Sun. The **altitude angle**, the angle between the horizontal and the line to the Sun is also used. The **azimuth angle** is measured as the angular distance from the north. These angles can be calculated with the help of several formulas.
+
+\begin{equation} 
+  cos Z = sin B = sin \phi \cdot sin \delta + cos \phi \cdot cos \delta \cdot cos h
+   (\#eq:Eqangles)
+\end{equation} 
+
+* Z  is the zenith angle
+* B is the altitude angle
+* φ is the latitude
+* ∂ is the solar declination of the earth (varies around 23°)
+* H is the solar hour angle (the angle between the solar noon and where it is at the moment of observation, it is expressed in ° or in hours, 1 hour before solar noon the hour angle is -1 or -15°)
+
+\begin{equation} 
+  cos A_{sun} = \frac{\left(sin \delta \cdot cos \phi - cos \delta \cdot sin \phi \cdot cos h \right)} {sin Z}
+   (\#eq:EqAsun)
+\end{equation}
+
+Asun is the azimuth angle.
+
+The total amount of radiation received at the atmosphere is the **solar constant** of 1370 Watt per square meter (seen before). We can correct this for solar angle and the radius vector rv, relative distance between the earth and sun, the relative ratio between the current and average distance to the sun.
+
+\begin{equation} 
+   S_H = S_p cos Z
+   (\#eq:Eqdist1)
+\end{equation}
+
+\begin{equation} 
+   S_H = \frac{S_c}{r_v^{2}} cos Z
+   (\#eq:Eqdist2)
+\end{equation}
+
+We can also calculate the total daylength, defined as the period during which the sun is above the horizon. See more details during the practical.
+
+\begin{equation} 
+   \frac{24}{\pi} cos^{-1}\left(-tan\phi \cdot tan \delta \right)
+   (\#eq:Eqdaylength)
+\end{equation}
+
+## Daily (diurnal) temperature variation
+
+The daily temperature variation is driven by the rotation of the earth and the day-night pattern. The rotation of the earth causes the alternation of day and night but also the rising and falling solar elevation.
+
+### Temperature profiles
+
+When we measure the temperature at different heights above the ground we see an **exponential profile** during a calm day while on a windy day a **linear profile** is obtained because of the **turbulence** and mixing of the different layers due the wind. On a calm day this exponential profile is caused mainly by convection (hot air bubbles are created at the earth surface due to the heating of the ground by the sun, but very slow process) and a little bit by conduction (only in the very low layers).
+
+During the night, cooling is strong at the earth surface (long wave radiation is leaving the surface = radiational cooling), causing a **nocturnal inversion**. This results in an increasing temperature profile with the coolest, heaviest air at the surface (which does not have the tendency to mix with the upper layers) and thus causes a stable atmosphere. Therefore, when comparing day and night the **temperature variation at the surface will be very large** (at night, the lowest temperatures are reached while during the day the hottest temperatures are obtained). This is why we don’t measure the temperature at the surface but at **1.5 m high in a thermometer hut** (above the diurnal variation), so we can measure the variation from day to day. The temperature also depends on humidity, wind, albedo, vegetation, which is also why a thermometer is placed in a hut with shielding so it is not determined by direct radiation. Also during the night the profile is linear for a windy night and exponential when it is a calm night.
+
+### Temperature–radiation link
+
+This figure shows how the temperature will vary during a sunny day (diurnal pattern of 24 hours) but it also shows the net radiation balance (net shortwave incoming & net long wave outgoing). The highest temperatures on a sunny day are not reached at the solar noon but a few hours later. The peak of temperature is not at the same time as the peak of solar energy because the temperature is the result of the total energy balance. During the day the incoming energy will be larger than the outgoing energy (positive net energy), which means that also after the solar noon the systems is receiving energy and thus keeps warming the atmosphere. Only when the incoming solar energy is lower than the outgoing energy (in the afternoon), there is a energy deficit and the atmosphere starts cooling. The temperature will decline as long as the outgoing energy is larger than the incoming energy, which is until a few moments after the sun rises (the first moments after the sun rises the incoming solar radiation is not yet enough to compensate the long wave deficit). In the early morning the coolest temperature is measured. The temperature profile is determined by the difference between incoming solar energy and outgoing energy but the outgoing long wave energy profile is also determined by the earth surface temperature. Therefore, the peak in long wave deficit will also be in the afternoon when the surface is hottest. In conclusion, temperature and radiation are linked in both directions. On a cloudy day the incoming solar energy will fluctuate more, causing the temperature (and thus the long wave deficit) not to follow this nice, theoretic pattern.
+
+
+### Thermal belt in valleys
+
+The temperature profile has an impact on agriculture. For example, at night there will be advection (horizontal transport) of cold air downhill in the valley while warm air is stays on top. But because the temperature also decreases with height there will be a combination of these two effects and the highest temperatures are reached in the middle. This is called a **thermal belt**, a zone on hillsides where there is a moderate climate (it doesn’t really cool off that much here) and where certain plants can grow which cannot grow below or above this zone. Vineyards will typically be located in these zones (not on the bottom of these valleys). Another consequence is that there is cold and stable air on the bottom of the valley where smoke and pollution will linger increasing the environmental and **pollution problem of cities located in valleys**. 
+
+### Crop protection
+
+The peak of low temperature in the early morning can be a problem for a lot of crops, especially in spring when the crops are growing. Therefore, there are several methods to deal with this spring frost. Firstly, there are **orchard heaters** which blow warm air but are not energy efficient. Secondly, a smarter method is the use of **wind generators** which cause turbulence and mixing of the cold air with the warmer air above (changing the exponential temperature profile into a linear profile with warmer temperatures near the ground). Thirdly, there is a method where you spray the crops with water just before the temperatures drop below freezing, which creates an **ice coating** and releases latent heat. Lastly, **plastic foils** are used to keep the heat inside (green house effect). 
+
+## Regional temperature variation
+
+### Main temperature controls
+
+The temperature varies worldwide (see world map which shows the average temperature over 30 years). From this map we can derive the **four main temperature controls** on earth. Firstly, the most important control is the **latitude** (~ solar angle, higher latitudes are colder). However, this map is not linear with latitude because of the three other temperature controls. Secondly, **land and water** transition also play an important role (lines deflect near land water transitions). Thirdly, **ocean currents** play an important role and explain for example why it is warmer in Europe than on the same latitude in North America. Lastly, **elevation** explains some anomalies such as the one near the Himalayas, Alpes, Rocky mountains and Andes. These four factors determine for the most part which temperatures there are on earth. But of course, there are also local factors which determine the temperature locally and regionally.
+
+```{r MAT, fig.cap='Figure caption MAT',echo=FALSE}
+knitr::include_graphics(c('figures/FigureMAT.png'))
+```
+
+### Global isotherm maps (°F)
+
+On this global isotherm map for January we can see the highest temperatures south of the equator. We see the **isotherms are closer to each other in the northern hemisphere** (e.g. strong temperature gradients and thus very variable weather). In the contrary in July, the isotherms have shifted up but also the isotherms are further away from each other meaning weather will be more stable. 
+
+We can also see that near **water-land transitions**, there are kinks in the isotherms. This is caused by the different energy balance between land and water due to the higher heat capacity of water. But these kinks are also related to the **ocean currents** (e.g. higher temperatures near Europe caused by the golf stream). Lastly, we see that in the **southern hemisphere the situation is stable throughout the year** (the isotherms are practically parallel and not close together). This is because there is significantly less land mass in the southern hemisphere.
+
+## Air temperature data
+
+### Temperature scales
+
+\begin{equation} 
+   K = °C + 273.13
+   (\#eq:EqK)
+\end{equation}
+
+\begin{equation} 
+   °C = 5/9 \left(°F - 32 \right)
+   (\#eq:EqF)
+\end{equation}
+
+
+### Thermometer huts
+
+How do we measure these air temperatures? In standard circumstances, temperature is measured in a thermometer hut which is well ventilated and cut off from radiation. This thermometer hut is also placed on a standard height to be above the diurnal temperature variations.
+In the past this was done manually (someone went out two times a day to measure the temperature). With a minimum-maximum thermometer the minimum and maximum temperature of the last 24 hours can also be measured.
+
+### MAT (Mean annual temperature) vs seasonality
+
+What do we do with this data? Often the mean annual temperature (MAT) of a location is used. But this does not say everything about the climate. For example, two different locations can have the same mean annual temperature but completely different climates. 
+
+### Growing degree days
+
+Growing degree days is a cumulative temperature sum. You choose a basis temperature (for example 0°) and measure the maximum temperature everyday (for example 5° today, 10° tomorrow, 6° the day after that). Then you make the cumulative sum of the differences between the maximum temperatures and the basis temperature (so 5+10+6=21 degree days). During the growing season you can further accumulate this temperature sum which is used to study or estimate different phenological phenomena of plants (for example, you need a sum of 1200-1300 to harvest certain crops).
+
+### Wind chill index
+
+The temperature we feel depends on the wind and is determined through the wind chill index. Higher wind speeds gives us lower wind chill index (so it feels colder when there is more wind).
+
+## Atmospheric moisture (psychometry)
+
+The study of air humidity is also called psychometry.
+
+### Three phases of water
+
+Water is present in the air in three phases: solid (ice), liquid (water droplets), gas (water vapor). Above a water surface there is a dynamic equilibrium, where water evaporates and condensates continuously.
+
+### Saturation and condensation
+
+If you have a closed jar with water and air, an equilibrium will be set, where there will be and equal amount of evaporation and condensation. In this situation, the air will be **saturated** with water vapour (100% relative humidity). Condensation happens on a surface, typically **condensation nuclei** (so when water vapor collides with these particles they could condense on them). 
+
+This condensation will happen more easily in cold air because in warm air there is more kinetic energy and the water vapor won't stick as easily to the nuclei.
+
+### Humidity terminology
+
+How do we define air humidity? There are several definitions when looking at a parcel of air to define how much water is present. Firstly, there is **absolute humidity**, this is the mass of water vapour per volume of air (g/m³). But if the air warms, the volume of the parcel will increase and the absolute humidity will decrease while the amount of water molecules stays the same. Secondly, the **specific humidity**, is the mass of water per total mass of air (g/kg). In contrary to the absolute humidity the specific humidity stays the same when the temperature increases (and is therefore preferred in meteorology). Thirdly, the **mixing ratio** is the mass of water per mass of dry air and is mainly used in atmospheric chemistry (studying pollutants).
+
+This figure shows the specific humidity on earth in g/kg air per latitude. Typically, there is a latitudinal pattern with high specific humidity at the equator and decreasing specific humidity to the poles. It tells us something about the exact amount of moisture there is in the air, so also above dry areas (e.g. savannas) high values are obtained even though the air doesn't feel humid. How we perceive humidity is better presented with the relative humidity (see later).
+
+This figure shows the global pattern of specific humidity and shows the areas with more moisture in the air, typically more above oceans compared to land and typically more above the equator than further away from it. This is the situation in July (summer in northern hemisphere), in the winter it will be shifted downwards because then there is more evaporation above the oceans in the southern hemisphere.
+
+
+### Vapour pressure
+
+Vapour pressure is the partial pressure of water in a gas mixture (in this case, the air). The **actual vapour pressure** is the vapour pressure we observe at the moment. **Saturated vapour pressure** is the vapour pressure in saturated air (closed container) and depends on the temperature. At different temperatures there will be different saturated vapour pressures. At lower temperatures, condensation is slower (lower flux) so you also need less evaporation to be in equilibrium. The saturated vapour pressure increases exponentially with temperature (see figure). Below 0°C (above ice or above super cooled water) there is also a vapour pressure. The curve is different for ice compared to super cooled water because sublimation of ice to gas is slower than evaporation of water to gas. The current vapour pressure is also the pressure measured in an open container (see figure).
+
+The **Mollier diagram** (psychrometric chart) shows the saturated vapour pressure as a function of the temperature (line at RH = 100). It also shows different relative humidities which are equal to the current vapour pressure divided by the saturated vapour pressure and thus, also depends on the temperature. If you have a closed container with a certain actual vapour pressure, and if you increase the temperature, the actual vapour pressure stays the same but the relative humidity decreases. This is because the saturated vapour pressure increases (warm air can hold more water vapour than cold air). On a Mollier diagram you can also determine the **dry and wet bulb temperature**. The wet bulb temperature is the temperature you measure with a thermometer which is covered with a wet cloth. The dry bulb temperature is what you measure with a normal thermometer. If you know these two temperatures you can determine the (**relative**) **air humidity** using the Mollier diagram. Also the **dew point**, the temperature at which condensation happens, can be determined.
+
+### Relative humidity and dewpoint
+
+On a sunny day without rain (no water input) there is an inverse relationship between the temperature and the relative humidity. Relative humidity is important in meteorology because it really tells something about how we experience the air humidity. It is not only how we experience it but also how plants experience it. It also determines evapotranspiration. Typically, the highest relative humidity is obtained when the temperature is lowest (early in the morning).
+
+### Heat index
+
+The air humidity also determines how we experience temperature. So how we experience temperature is not only determined by the wind chill but also by the air humidity. A higher humidity results in a higher temperature experience (see heat index) because your body has more difficulty to transpire in humid air.
+
+## Condensation: dew, fog and clouds
+### Condensation on surface
+
+Condensation always happens on a surface, when the dew point is reached (and thus depends on the air humidity). When the temperature cools till the dew point condensation, **deposition or rime** formation occurs. Condensation on the earth surface can result for example in the formation of **dew**. This happens in the morning because the loss of long wave radiation can cool down the air till the dew point and condensation happens. This cooling (and thus dew formation) is typically strong on clear calm nights (no clouds so a lot of longwave radiation loss and no turbulence which creates the exponential temperature decrease). **Frozen dew** are droplets which form and subsequently freeze while rime is water vapour which freezes onto the surface directly.
+
+### Condensation nuclei
+
+In the atmosphere, condensation happens on **condensation nuclei** (e.g. aerosols, small particles in the air). These condensation nuclei can be **hygroscopic** (attract water) resulting in faster condensation. They can also be **hydrophobic** (repel water) but then it has to be even colder in order for condensation to take place on the particle. Condensation nuclei are typically particles which are **smaller than 0.1 µm** and are present in the atmosphere in a density of 100 - 1000 particles/cm³.
+They can be classified according to size but the majority are the smallest particles (<0.1 µm).
+
+### Haze
+
+These condensation nuclei induce condensation, water droplets that linger in the atmosphere. If these are low above the ground, there is **haze and fog**. The difference is determined by the visibility. If you cannot see farther than 1 km then we talk about fog. If you can see farther than 1 km then we talk about haze. Haze is also split up in dry and wet haze according to the relative humidity which is less than 75% and more than 75% respectively. Fog and haze are also typically formed in the morning when a cold layer of air is obtained due to radiational cooling and the dew point is reached.
+
+### Fog types
+
+Fog can be classified into four groups. The phenomenon is the same, condensation in the air layer above the earth surface, but the cause is different. 
+
+The most important type is **radiation fog** (ground fog) which is caused by radiational cooling (longwave cooling at night). This is typically fog where we can see above it (e.g. radiational fog in a valley due to advection). This fog typically disappears during the morning because the droplets evaporate again to the sun.
+
+The second type of fog is **advection fog** (horizontal transport) which is formed when humid air moves over a cold surface and cools down and condenses. In Europe this can typically be found above the British isles, Ireland and Scotland. In winter the land is colder than the ocean and relatively warm moist air moves over Ireland/Scotland which then cools down and condensates forming advection fog. The best-known example of advection fog is the fog in the bay of San Francisco. This bay receives rivers that come from inland/mountains with cold water. If warm ocean air goes over this bay this air cools off and forms a fog.
+
+The third type of fog is **upslope fog** which is found in mountain areas, where the wind pushes air up the mountain and the air cools off and condenses.
+
+The last type of fog is **evaporation fog**/**mixing fog** and is the result of the mixing of hot humid air and cold air. The humid air cools off and condenses. This fog is typically formed after a heavy rain fall in summer when water evaporates from the wet road and mixes with the colder air above and condenses. Evaporation fog also arises above geysers where the warm humid air above the geyser mixes with the colder air around it and condenses. Evaporation fog is typically a local phenomenon.
+
+### Cloud types
+
+The first classification of clouds was done by Luke Howard (1803). He classified clouds in four types: stratus ("layer"), cummulus ("heap"), cirrus ("curl of hair"), nimbus ("violent rain"). This classification evolved in **10 basic types in four groups according to height** (+ special clouds). The high clouds are cirrus clouds, the middle clouds start with "alto", there is also different low clouds and the last group consists of clouds with vertical development. 
+
+The high clouds (Ci, Cs, Cc) are present in the upper part of the troposphere around 5 km - 13 km high. Middle clouds are present around 2 - 7 km while low clouds are found under 2 km. The high clouds are typically cold (thus consist of ice crystals) and dry clouds (rain never falls from these clouds). Middle clouds are a mixture of water droplets and ice crystals while low clouds mostly consist of water droplets. When clouds consist only of ice crystals they are white. When they only consist of water droplets they are grey. 
+
+#### High clouds
+
+**Cirrus** clouds (Ci), which are a type of high clouds, are very common. These clouds look like mare’s tales, feathers, fringes and are formed by geostrophic winds (winds high in the atmosphere) which can bend the clouds in the same direction. These clouds are typical for nice weather, high pressure areas but can also be a first messenger for fronts (they indicate the weather will change).
+
+A second type of high clouds are **cirrocumulus** clouds (Cu) which look like small, rounded white puffs and are seen less frequently. They can be present individually but are typically seen in long rows (mackerel sky). These clouds are formed when there is some convection, locally, at high altitudes. 
+
+More common is the third type of high clouds, **cirrostratus** (Cs) which is extended blanket of clouds. It is a thin layer of clouds high in the air which is present at stable weather. It is typically recognized by the halo (ring of rainbow colours) seen around the sun when looking straight at the sun. This halo is caused by the ice crystals in these clouds which reflect the sunlight. Cirrostratus clouds are also typically the second messenger of a storm or a change in weather.
+
+#### Middle clouds
+
+**Altocumulus** clouds (Ac) are middle clouds which typically a mixture of grey (water droplets on the bottom) and white (ice crystals on the top). They are quite thick cloud blanket but not always easy to differentiate from a stratocumulus (see later). Also these clouds can be a messenger for a strong weather change. 
+
+More common and more easily recognized is the second type of middle clouds, **altostratus** (As). This is a stratus clouds at middle heights (2-5 km) and is thicker and greyer than cirrocumulus. There is no halo because the layer is too thick but you can see a “watery sun” like looking at the reflection of the sun in a lake. When you see this altostratus after seeing cirrus and cirrostratus you know it is going to rain soon. 
+
+#### Low clouds
+
+The first type of low clouds is **nimbostratus** (Ns) which is are dark grey clouds from which rain falls. This is the typical cloud for a long rainy day. It looks wet and dark grey and is typical for a drizzly day where there is light or moderate rain or snow. Small clouds seen on the picture are called stratus fractus and are pieces of clouds which are below the nimbostratus. 
+
+The second type of low clouds is **stratocumulus** (Sc) which are rows or patches of large grey cumulus clouds with blue sky in between. 
+
+A third type of low clouds is **stratus** (St) which is a uniform greyish cloud through which you can not see the sun anymore. Sometimes it is called lifted fog when it was originally fog which was lifted instead of disappeared. Fog is actually a stratus clouds which is near the surface (< 1 km high). No rain comes from stratus clouds, when it does it is actually a nimbostratus cloud. 
+
+#### Clouds with vertical development
+
+Clouds with vertical development, **cumulus** clouds (Cu), are individual (detached) clouds which have a variety of shapes but always a flat base. A small cumulus cloud (cumulus humilis) can also evolve in a larger cumulus cloud (cumulus congestus) with a different shape. Cumulus humilis, also called fair weather clouds, are typically formed on a sunny afternoon and show only a slight vertical growth.
+
+Cumulus congestus clouds, on the other hand, are more vertically developed and have a “cauliflower-like” shape.
+
+Eventually a cumulus congestus cloud can evolve to a **cumulonimbus** cloud (Nb). Cumulonimbus clouds are clouds which grow to the top of the atmosphere and are thus about 8 km in height (bottom at 2 km and the top at 10 km). Clouds cannot grow higher than the stratosphere which is a very stable layer so they spread out horizontally at the top and become anvil shaped. This anvil top can also be reshaped by the geostrophic winds. Cumulonimbus clouds have a dark base with rain droplets and a white top with ice crystals. These are the clouds which cause storms due to strong convection on hot days for example. 
+
+#### Summary
+
+#### Unusual clouds
+
+In addition, there are also other (unusual clouds) which are less relevant to study the weather because they are formed under special circumstances. Lenticular clouds are typically seen in mountain areas and are waves formed by air crossing a mountain barrier. Pileus cloud is a kind of tower-like cumulus cloud. Banner cloud is a cloud which typically can be found around an isolated mountain peak. Mammatus clouds are exceptional clouds which have no flat base but have bulges at the base which can only be formed under special circumstances. Contrails are the condensation trails of air planes (anthropogenic origin) and are important because they influence the radiation balance. 
+
+### Cloud observation
+
+Cloud observation can be done in the field with the scale of eighths. With this method you divide the sky into eight parts and determine how many are parts are clouded. Cloud measurements can also be done automatically by ASOS (automated surface observing system) which use ground-based weather station. 
+
+Most cloud observations are done on a larger scale with satellites. Geostationary satellites are fixed above one point at about 36000 km high and are typically the weather satellites. Polar orbiting satellites orbit around the earth at 850 km high and give more detailed information. 

@@ -1,0 +1,203 @@
+
+# Pressures and winds
+\chaptermark{PandW}
+
+## Atmospheric pressure
+
+### Gas law and air pressure equation
+
+Ideal gas law:
+
+\begin{equation} 
+  PV = nRT
+   (\#eq:Eqgaslaw)
+\end{equation} 
+
+The density of the air is directly depending on the pressure and the temperature. 
+
+\begin{equation} 
+  \rho_m = \frac{n}{V} = \frac{P}{RT}
+  (\#eq:Eqairdensity)
+\end{equation} 
+
+Molar density = mol per volume
+
+\begin{equation} 
+  density = \frac{m_j}{V} = \frac{nM_j}{V} = \frac{P}{RT}M_j = \rho_m M_j
+   (\#eq:Eqdensity)
+\end{equation} 
+
+Actual density : mass per volume, M = molecular mass
+
+Hydrostatic equation
+Pressure change = gravitiation constant x density x height difference
+= scale height, which is the height at which a certain properties changes with factor e, this H is used to integrate the equation to an exponential equation. H is constant for a gas under standard conditions (fixed T and P) . Air pressure decreases exponentially with height. 
+
+\begin{equation} 
+  -dP = g \rho dz
+   (\#eq:Eqhydrostatic)
+\end{equation} 
+
+dP = change in pressure [Pa]
+dz = change in height [m]
+ρ = density of air [kg/m³]
+g = gravitational constant= 9.81 m/s²
+
+\begin{equation} 
+  \frac{dP}{P} = \frac{-g}{RT / M_a}  dz = - \frac{dz}{H}
+   (\#eq:Eqhydrostatic2)
+\end{equation} 
+
+Integration of the previous equation gives the pressure at heigh z, infunction of the pressure at the surface (Ps).
+
+\begin{equation} 
+  P = P_s e^{-z/H}
+   (\#eq:Eqhydrostatic3)
+\end{equation} 
+
+Rearranging the terms in the hydrostatic equation to relate change in mass per unit area (dm, kg /m²) to change in pressure (dP):
+
+\begin{equation} 
+  dm = \rho dz = - dP / g
+   (\#eq:Eqhydrostatic4)
+\end{equation} 
+
+
+### Air density
+
+Air density decreases exponentially with height (see chapter 1), also air pressure decreases exponentially. Pressure is a force on a surface. When the mass above a surface rises, the pressure will rise.
+
+### Pressure variations
+
+#### Horizontal pressure variations
+
+**Conceptual model** for air pressure variations and the creation of winds and a convection cell. In this conceptual model homogeneous air columns are assumed. A pressure difference aloft is created due to temperature difference between two air columns. At that point there is still equal pressure at the surface. As soon as air starts moving between the two columns, an air pressure difference at the surface in initiated, resulting in surface winds and the **creation of a convection cell**.
+
+```{r airpressure, fig.cap='Figure caption',echo=FALSE}
+knitr::include_graphics(c('figures/Figure41a.png','figures/Figure41b.png'))
+```
+
+#### Daily Pressure Variations
+
+**Temperate areas** show pressure variations at the synoptic scales, these are variations from day to day or over several days. This is the time scale at which we experience weather variations in Belgium, via the movement of H and L pressure zones.
+
+In the **tropics** we see a typical diurnal pattern with high pressure in the morning and lower pressure in the afternoon. This pattern is called the ‘**atmospheric tides**’.
+
+### Pressure measurements
+
+#### Pressure measurements
+**Standard atmospheric pressure** is 1013,25 mbar or hPa. Weather variations are induced by relatively small pressure differences between 980 and 1040 mbar. Extreme high pressures are found over lard landmasses (e.g; Siberia), extreme low pressures are found in the centre of low pressure zones, storms and hurricanes. 
+
+#### Altiltude corrections
+Pressure observation are strongly influenced by the altitude. Without correction a pressure map would just represent the topography. With altitude corrections (on average 10 mb per 100 m  first part of linear pressure decay) we find a map representing the actual pressure gradient, on which **isobars** represent points of equal pressure. Smoothing of the isobars to get rid of local disturbances and get a clearer view on the general trend in pressure.
+
+### Weather charts
+
+A **surface pressure map** represents the pressure at the earth surface (with altitude corrections). Isobars are lines that connect points with equal pressure. A map of surface pressure is very different then the map of pressure at higher altitude at that same moment. Lower pressures but also a different spatial pattern is found higher in the troposphere, due to a complex 3D pattern. The **500mbar surface** is a surface in the middle of the troposphere that connects the points of 500mbar.
+
+In cold areas, air is compressed and expanded in warm areas, resulting in complex form of the 500mbar surface with **warm ridges** and **cold throughs**. Cold throughs are typically areas with cloud formation and precipitation. On the surface pressure map we can see l pressure centres (cyclones) and H pressure centres (anticyclones).
+
+A **contour plot** is a map that represents the altitude of the 500 mb surface which is a complex 3D surface situated around 5600 m altitude (= around the middle of the troposphere). We observe that the wind direction is parallel to the contour lines on the contour plot and that on the surface pressure map the wind direction is crossing the isobars. The reason for this will be explained in the next sections. 
+
+## Forces
+
+Fundamental laws of motion – Newton’s Laws: **Newton’s second law**.
+
+According to the second law of newton wind (air movement) is an acceleration resulting from a force. This is a net force which results from underlying forces; In the next sections we describe these forces. Different wind types are initiated by different combinations of these forces. Pressure gradient force is the driving force of all winds. Coriolis force plays a role for all winds. Friction only plays a role for surface winds. The centripetal force only plays a role for gradient winds.
+
+
+### Pressure gradient force
+
+This is the **driving force of all winds**. Wind is blowing from H to L pressure. When isobars are close to each other, the PGF is higher. Wind speed is not determined by the absolute pressure value in an area, but by the gradient, thus by the density of the isobars. 
+
+### Coriolis force
+
+The Coriolis force is rather an **observer effect** than an actual force. It is therefore better to call it the ‘Coriolis effect’. It is caused by the **rotation of the earth**. The direction of wind is influenced by it, but not the speed. In the Northern hemisphere moving objects are deviated to the right, while they are deviated to the left in the Southern hemisphere. The Coriolis force is depending on the speed and direction of the earth rotation (the faster the rotation, the stronger the deviation, the latitude (the closer to the poles, the greater the effect) and the speed of the object (the higher the wind speed, the stronger the deviation).
+
+### Friction
+
+The friction force depends on the roughness of the surface and is only having an influence in the **planetary boundary layer** (first ~1 km of the troposphere). More roughness results in more turbulence and a stronger friction. Friction is working in the opposite direction of the wind direction.
+
+## Geostrophic, gradient, surface winds
+
+### Geostrophic winds
+
+Geostrophic winds are the winds aloft, high in the troposphere, not influenced by friction. Only two forces play a role here: the PGF and the Coriolis effect. These winds are responsible for the feather-effect of cirrus clouds and for the formation of the anvil top of a cumulonimbus cloud.
+
+When a theoretical parcel of air is ‘released’, there is only the PGF. As soon as the parcels starts to move due to the PGF, there is a deviation to the right (Coriolis). An equilibrium is reached when both forces are equal and opposite, and the resulting force is zero. The parcel will keep moving with constant speed in parallel to the isobars.
+
+Geostrophic winds are comparable to a river. The flow is faster when the river is narrower, while the discharge is constant, the same happens for geostrophic winds when the isobars are closer to each other. In the Northern hemisphere the L pressure zone is always located left when looking in the wind direction. 
+
+### Gradient winds
+
+Gradient winds are a specific type of geostrophic winds that rotate around H and L pressure centres. We need to account for a small **centripetal force** (= V/r²) that makes the wind to keep rotating. This is the resulting force in the equilibrium state (not zero like for geostrophic winds). The closer to the pressure centre, the stronger the centripetal force needs to be to stay on the path. Gradient winds around H pressure centres blow relatively faster then corresponding gradient winds around L pressure centres with an equal PGF. This is because in case of a H pressure zone the Coriolis force (and thus the wind speed) needs to be higher to reach the necessary centripetal force. However, in reality PGF is mostly stronger around L pressure centres, so we typically observe higher wind speeds associated with L pressure centres (cyclones).
+
+#### Cyclonic flox (NH)
+
+#### Anticyclonic Flow (NH)
+
+#### NH vs SH
+
+In the Northern hemisphere gradient winds rotate counter clockwise around L pressure zone, while the opposite happens in the Southern hemisphere.  
+
+### Surface winds
+
+In the case of surface wind the equilibrium between the different forces is reached earlier (in comparison to gradient winds). This is due to the friction force that we have to consider. The friction force acts in the opposite direction as the wind direction. And the Coriolis force works perpendicular to the wind direction. As soon as the sum of the Coriolis force and the friction force equals the PGF, the equilibrium is reached and the acceleration becomes zero. Surface winds will then blow at a constant speed in angle with the isobars. This angle is on average 30°, but depends on the roughness of the terrain. The higher the roughness the higher the angle alfa. 
+
+NH: winds are converging counter clockwise in a L pressure zone.
+
+SH: winds are converging clockwise in a L pressure zone
+
+### Buys-Balot
+
+This is a rule of thumb how you can determine in practice in the field where H and L pressure centres are located based on the observed wind direction. Keep in mind that you have to account for an angle of 30° when surface winds are used as a reference. When this rule is applied for the Southern hemisphere, H and L switch places. 
+
+### Vertical air motions
+
+In this course we are mainly focussing on horizontal air motions. However vertical air motions are important too especially for more advanced meteorology and weather models. Important to know is that vertical air motions are typically slower. Gravitation forces are slowing down these motions. In a low-pressure zone there is convergence at the surface. The rising air in the L sucks the air towards the L centre. In a H the opposite happens, sinking air is pushing the air out of the centre horizontally at the surface, divergence. At higher elevation (aloft), convergence and divergence is realized in a different way, because geostrophic (and gradient) winds are not crossing the isobars. In that case convergence and divergence is realized by changing distances between the isobars and the complex 3D structure of the pressure surfaces.  
+
+## Small scale and local wind systems
+### Scales of atmospheric motion
+
+* Microscale: turbulences at very small scale, e.g. in a smoke plume. Phenomena that exist for seconds or minutes.  
+* Mesoscale: scale of up to several kilometres, the shape of a smoke plume, individual clouds, phenomena that changes at a time scale of hours. 
+* Synoptic: it is the scale level of a weather map, up to a few 1000 km, phenomena that change over a temporal scale of a day up to a week  
+* Global or Planetary: for example, the movement of the location of the jet stream, Rossby waves, phenomena that change in time scales of weeks. 
+* There is a clear correlation between the temporal and spatial scale of wind phenomena. 
+
+### Small scale
+
+**Turbulent flow (turbulence)**: any disturbed flow of air that produces wind gusts and eddies.
+
+* **Thermal and mechanical turbulence**. Larger turbulence in unstable conditions (surface heating during the day).
+
+* **Wind speed profile**: up to 1 km height, there is influence of the earth surface. The shape of the wind profile depends on: the stability (surface heating), roughness of the earth surface, wind speed. In case of high mixing, the profile will be more linear.
+
+* **Eddies**: are not always vertical. See example of horizontal eddies on slide 41 of the lecture (islands). Eddies associated with lenticular cloud formation.
+
+**Interaction with surface**:
+
+* Wind and soil: interaction between very local wind systems and the surfaces (e.g. sand dunes)
+
+* Wind and vegetation: shelterbelts, hedgerows in the landscape to protect croplands, or to create a microclimate in croplands.
+
+* Wind and water: waves are created by the interaction between wind and  the water surface. As soon as the waves exists, they create an extra roughness, resulting in eddies that can reinforce the waves even more (feedback loop).
+
+### Local wind systems
+
+* Thermal Circulations: **a closed convection cell**. Sometimes very local over a few 100 meters.
+
+* **Sea and Land Breezes**: a typical example of a convection cell. Water heats slowly (heat capacity), land warms up fast during the day. Creation of a sea breeze during the day. Cool wind blows into the land up to 50 km inland. Systems follows a day-night pattern, with a land breeze (less pronounced) during the night. 
+
+* **Mountain and Valley Breezes**: during the day the creation of local L zones on the slopes of the mountains. Valley breeze rises up to the mountain, cloud formation above mountain tops/ridges, summer thunderstorms in the Alps. During the night drainage winds (mountain breeze) sink into the valleys (cfr. themal belt in previous chapter). Day-night temperature variation is strongest in the valleys. 
+
+* **Katabatic Winds**: descending winds from mountain plateaus. Mistral wind in Rhone valley in France is descending from the Alps, can bring cool air in summer, but in spring it can bring frost and damage to vineyards.
+
+* **Föhn (Alps) / Chinook (Rockies)** winds (cfr. Orographic cloud formation). Warm dry winds that descenc at the leeward side of a mountain. The driving wind system acts at a larger scale (not created local in the mountains), but the local properties if these winds (dry, warm) are initiated locally by the topography.
+
+* **Desert Winds**: local low pressure zones, with local convergence. Local sand storms in deserts or at large scale (Haboob).
+
+* **Sahara Winds**: warm and dry winds from H pressure zone in source area of Sahara (see lecture on air masses). Dry and warm winds, that have different names in different regions.
+
+* Seasonality changing winds: **The Monsoon**: This is a continental scale “local” wind system. You can consider it as a sea breeze at continental scale, and with a temporal cycle which is seasonal (winter /summer). During winter, the land is relatively colder, creating a H pressure zone. Wind is blowing away from the continent into the ocean, this is the dry season in SE Asia. 
+In summer, there is preferential heating of the land, creating a continental low-pressure zone. Warm and moist monsoon winds are blowing from the ocean to the land. Condensation (cloud formation) over the land releases extra latent heat, making the wet season extra hot and moist. This phenomenon is even strengthened due to orographic cloud formation towards the Himalaya. On top of that, melting water is coming in from the Himalaya in spring (something which is not occurring for the West African monsoon), leading to the well-known floodings in countries like Bangladesh. The West African monsoon has a similar mechanism. These countries are very depending on monsoon rains for agriculture, but extreme monsoons causes floodings…

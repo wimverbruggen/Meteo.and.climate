@@ -1,0 +1,16 @@
+--- 
+title: "Meteorologie en ecoklimatologie"
+author: "Hans Verbeeck, Louise Terryn, Félicien Meunier"
+date: "`r Sys.Date()`"
+output: pdf_document
+description: Syllabus associated to the course XX taught at Ghent University
+documentclass: book
+link-citations: yes
+bibliography:
+- book.bib
+- packages.bib
+site: bookdown::bookdown_site
+biblio-style: apalike
+---
+
+# Prerequisites {-}

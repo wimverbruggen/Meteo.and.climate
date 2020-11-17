@@ -1,0 +1,79 @@
+# Atmospheric stability, cloud development, precipitation
+\chaptermark{Atm}
+
+
+```{r,echo=FALSE,message=FALSE,warning=FALSE}
+knitr::kable(mtcars[1:6, 1:6], caption = 'Example of table directly from R',format = c("pandoc"))
+```
+
+Lorem ipsum dolor sit amet, fermentum ornare morbi sociosqu dictumst. In malesuada nulla aliquam id tellus ridiculus eu. Ac id ridiculus nec commodo in feugiat in. Parturient amet eget suspendisse diam non platea justo. Elementum ac lacus cubilia nulla vestibulum eu, egestas. Nec non urna mi et, malesuada enim. Vitae at amet varius erat. Aenean nunc commodo sodales accumsan, nec dui posuere nec elit, etiam. Maximus faucibus magnis penatibus euismod vestibulum, tempor turpis. Ac, tincidunt potenti felis enim morbi blandit, accumsan bibendum vitae nulla senectus dictum. Ac ac sagittis ut in quam nec gravida etiam a conubia ex.
+
+Ut non, venenatis in, scelerisque in sed, interdum ipsum. Non imperdiet, sagittis, erat tempor. Pretium ligula, augue curabitur mi luctus nam auctor fames? Tellus tristique rutrum integer fermentum dapibus, vehicula nascetur. Ante fringilla orci, nostra maximus tempus! Donec non ligula in eu sociis sed tincidunt purus nunc. Orci nam conubia dis orci lacus. In aenean leo quis enim convallis, sagittis massa. Odio varius duis nec diam quam quis in condimentum et. Amet id, interdum vestibulum et diam quam litora eget vitae eget pharetra. Maecenas eget, donec pretium sit in condimentum ut lobortis, eu. Non, eget sed. Cras laoreet ut et a, maecenas magna inceptos malesuada.
+
+At odio phasellus. Vel, sagittis dictumst cum litora rhoncus. Elementum suspendisse. Metus porttitor netus interdum tristique ornare augue. Faucibus nibh amet, imperdiet commodo nisl consectetur semper. Suscipit lacus, ut iaculis nibh, et sit. Sapien lorem dolor interdum in dictum. Faucibus, eleifend quis, dapibus sed. Nam purus porttitor nulla facilisis varius amet in in blandit.               
+
+
+```{r,echo=FALSE,message=FALSE,warning=FALSE}
+
+library(dplyr)
+library(kableExtra)
+text_tbl <- data.frame(
+  "Type of model" = c("Biogeochemical", "Forst gap models", "Ecosystem demography"),
+  "Description" = c("Ecosystem models with emphasis","Individual trees","As in gap models"),
+  "Example" = c("TEM, CASA","FORET","ED"))
+
+knitr::kable(text_tbl, caption = 'Example of table from Bonan',format = "markdown")
+```
+
+
+```{r <nice2>, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Here is a second figure! It was generated in R', out.width='80%',echo=FALSE,message=FALSE,warning = FALSE}
+library(ggplot2)
+ggplot(midwest, aes(x=area, y=poptotal)) + 
+  geom_point(aes(col=state, size=popdensity)) + 
+  geom_smooth(method="loess", se=F) + 
+  xlim(c(0, 0.1)) + 
+  ylim(c(0, 500000)) + 
+  labs(subtitle="Area Vs Population", 
+       y="Population", 
+       x="Area", 
+       title="Scatterplot", 
+       caption = "Source: midwest") +
+  theme_bw()
+
+```
+
+
+You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway.
+
+Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+
+```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
+```
+
+```{r nice-fig2, fig.cap='Here is a second figure!', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE}
+knitr::include_graphics('figures/Figure_course.png')
+```
+
+
+$$\begin{array}{ccc}
+x_{11} & x_{12} & x_{13}\\
+x_{21} & x_{22} & x_{23}
+\end{array}$$
+
+
+Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+
+```{r nice-tab, tidy=FALSE,echo=FALSE}
+knitr::kable(
+  head(iris, 20), caption = 'Here is a nice table!',
+  booktabs = FALSE, format = c("pandoc")
+)
+```
+
+You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+
+$$
+  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+$$
