@@ -73,8 +73,8 @@ Air density decreases exponentially with height (see chapter 1), also air pressu
 
 **Conceptual model** for air pressure variations and the creation of winds and a convection cell. In this conceptual model homogeneous air columns are assumed. A pressure difference aloft is created due to temperature difference between two air columns. At that point there is still equal pressure at the surface. As soon as air starts moving between the two columns, an air pressure difference at the surface in initiated, resulting in surface winds and the **creation of a convection cell**.
 
-```{r airpressure, fig.cap='Figure caption',echo=FALSE}
-knitr::include_graphics(c('figures/Figure41a.png','figures/Figure41b.png'))
+```{r airpressure, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure41andb.png'))
 ```
 
 #### Daily Pressure Variations
@@ -83,13 +83,25 @@ knitr::include_graphics(c('figures/Figure41a.png','figures/Figure41b.png'))
 
 In the **tropics** we see a typical diurnal pattern with high pressure in the morning and lower pressure in the afternoon. This pattern is called the ‘**atmospheric tides**’.
 
+```{r dailyP, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE,out.width='80%'}
+knitr::include_graphics(c('figures/Figure42.png'))
+```
+
 ### Pressure measurements
 
 #### Pressure measurements
 **Standard atmospheric pressure** is 1013,25 mbar or hPa. Weather variations are induced by relatively small pressure differences between 980 and 1040 mbar. Extreme high pressures are found over lard landmasses (e.g; Siberia), extreme low pressures are found in the centre of low pressure zones, storms and hurricanes. 
 
+```{r Pmes, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure43.png'))
+```
+
 #### Altiltude corrections
 Pressure observation are strongly influenced by the altitude. Without correction a pressure map would just represent the topography. With altitude corrections (on average 10 mb per 100 m  first part of linear pressure decay) we find a map representing the actual pressure gradient, on which **isobars** represent points of equal pressure. Smoothing of the isobars to get rid of local disturbances and get a clearer view on the general trend in pressure.
+
+```{r Altcorrec, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure44.png'))
+```
 
 ### Weather charts
 
@@ -110,13 +122,27 @@ According to the second law of newton wind (air movement) is an acceleration res
 
 This is the **driving force of all winds**. Wind is blowing from H to L pressure. When isobars are close to each other, the PGF is higher. Wind speed is not determined by the absolute pressure value in an area, but by the gradient, thus by the density of the isobars. 
 
+```{r Pgradforce, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure45a.png','figures/Figure45b.png'))
+```
+
 ### Coriolis force
 
 The Coriolis force is rather an **observer effect** than an actual force. It is therefore better to call it the ‘Coriolis effect’. It is caused by the **rotation of the earth**. The direction of wind is influenced by it, but not the speed. In the Northern hemisphere moving objects are deviated to the right, while they are deviated to the left in the Southern hemisphere. The Coriolis force is depending on the speed and direction of the earth rotation (the faster the rotation, the stronger the deviation, the latitude (the closer to the poles, the greater the effect) and the speed of the object (the higher the wind speed, the stronger the deviation).
 
+```{r Coriolis, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure46.png'))
+```
+
 ### Friction
 
 The friction force depends on the roughness of the surface and is only having an influence in the **planetary boundary layer** (first ~1 km of the troposphere). More roughness results in more turbulence and a stronger friction. Friction is working in the opposite direction of the wind direction.
+
+
+```{r Friction, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure47.png'))
+```
+
 
 ## Geostrophic, gradient, surface winds
 
@@ -124,7 +150,15 @@ The friction force depends on the roughness of the surface and is only having an
 
 Geostrophic winds are the winds aloft, high in the troposphere, not influenced by friction. Only two forces play a role here: the PGF and the Coriolis effect. These winds are responsible for the feather-effect of cirrus clouds and for the formation of the anvil top of a cumulonimbus cloud.
 
+```{r Geos, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure48.png'))
+```
+
 When a theoretical parcel of air is ‘released’, there is only the PGF. As soon as the parcels starts to move due to the PGF, there is a deviation to the right (Coriolis). An equilibrium is reached when both forces are equal and opposite, and the resulting force is zero. The parcel will keep moving with constant speed in parallel to the isobars.
+
+```{r PGF, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure49.png'))
+```
 
 Geostrophic winds are comparable to a river. The flow is faster when the river is narrower, while the discharge is constant, the same happens for geostrophic winds when the isobars are closer to each other. In the Northern hemisphere the L pressure zone is always located left when looking in the wind direction. 
 
@@ -134,30 +168,62 @@ Gradient winds are a specific type of geostrophic winds that rotate around H and
 
 #### Cyclonic flox (NH)
 
+```{r CF, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure410.png'))
+```
+
 #### Anticyclonic Flow (NH)
+
+```{r ACF, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure411.png'))
+```
 
 #### NH vs SH
 
 In the Northern hemisphere gradient winds rotate counter clockwise around L pressure zone, while the opposite happens in the Southern hemisphere.  
 
+```{r NHSH, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure412.png'))
+```
+
 ### Surface winds
 
-In the case of surface wind the equilibrium between the different forces is reached earlier (in comparison to gradient winds). This is due to the friction force that we have to consider. The friction force acts in the opposite direction as the wind direction. And the Coriolis force works perpendicular to the wind direction. As soon as the sum of the Coriolis force and the friction force equals the PGF, the equilibrium is reached and the acceleration becomes zero. Surface winds will then blow at a constant speed in angle with the isobars. This angle is on average 30°, but depends on the roughness of the terrain. The higher the roughness the higher the angle alfa. 
+In the case of surface wind the equilibrium between the different forces is reached earlier (in comparison to gradient winds). This is due to the friction force that we have to consider. The friction force acts in the opposite direction as the wind direction. And the Coriolis force works perpendicular to the wind direction. As soon as the sum of the Coriolis force and the friction force equals the PGF, the equilibrium is reached and the acceleration becomes zero. Surface winds will then blow at a constant speed in angle with the isobars. This angle is on average 30°, but depends on the roughness of the terrain. The higher the roughness the higher the angle alfa.
 
 NH: winds are converging counter clockwise in a L pressure zone.
 
+```{r CW, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure413.png'))
+```
+
 SH: winds are converging clockwise in a L pressure zone
+
+```{r ACW, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure414.png'))
+```
 
 ### Buys-Balot
 
 This is a rule of thumb how you can determine in practice in the field where H and L pressure centres are located based on the observed wind direction. Keep in mind that you have to account for an angle of 30° when surface winds are used as a reference. When this rule is applied for the Southern hemisphere, H and L switch places. 
 
+```{r Buys, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure415.png'))
+```
+
 ### Vertical air motions
 
-In this course we are mainly focussing on horizontal air motions. However vertical air motions are important too especially for more advanced meteorology and weather models. Important to know is that vertical air motions are typically slower. Gravitation forces are slowing down these motions. In a low-pressure zone there is convergence at the surface. The rising air in the L sucks the air towards the L centre. In a H the opposite happens, sinking air is pushing the air out of the centre horizontally at the surface, divergence. At higher elevation (aloft), convergence and divergence is realized in a different way, because geostrophic (and gradient) winds are not crossing the isobars. In that case convergence and divergence is realized by changing distances between the isobars and the complex 3D structure of the pressure surfaces.  
+In this course we are mainly focussing on horizontal air motions. However vertical air motions are important too especially for more advanced meteorology and weather models. Important to know is that vertical air motions are typically slower. Gravitation forces are slowing down these motions. In a low-pressure zone there is convergence at the surface. The rising air in the L sucks the air towards the L centre. In a H the opposite happens, sinking air is pushing the air out of the centre horizontally at the surface, divergence. At higher elevation (aloft), convergence and divergence is realized in a different way, because geostrophic (and gradient) winds are not crossing the isobars. In that case convergence and divergence is realized by changing distances between the isobars and the complex 3D structure of the pressure surfaces.
+
+```{r VAR, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure416.png'))
+```
 
 ## Small scale and local wind systems
 ### Scales of atmospheric motion
+
+```{r scales, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure417.png'))
+```
 
 * Microscale: turbulences at very small scale, e.g. in a smoke plume. Phenomena that exist for seconds or minutes.  
 * Mesoscale: scale of up to several kilometres, the shape of a smoke plume, individual clouds, phenomena that changes at a time scale of hours. 
@@ -171,33 +237,91 @@ In this course we are mainly focussing on horizontal air motions. However vertic
 
 * **Thermal and mechanical turbulence**. Larger turbulence in unstable conditions (surface heating during the day).
 
+```{r Thermal, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure418.png'))
+```
+
 * **Wind speed profile**: up to 1 km height, there is influence of the earth surface. The shape of the wind profile depends on: the stability (surface heating), roughness of the earth surface, wind speed. In case of high mixing, the profile will be more linear.
 
+```{r Profile, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure419.png'))
+```
+
 * **Eddies**: are not always vertical. See example of horizontal eddies on slide 41 of the lecture (islands). Eddies associated with lenticular cloud formation.
+
+```{r Eddies, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure420.png'))
+```
 
 **Interaction with surface**:
 
 * Wind and soil: interaction between very local wind systems and the surfaces (e.g. sand dunes)
 
+```{r Soil, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure421.png'))
+```
+
+
 * Wind and vegetation: shelterbelts, hedgerows in the landscape to protect croplands, or to create a microclimate in croplands.
 
+```{r Vegetation, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='40%'}
+knitr::include_graphics(c('figures/Figure422.png'))
+```
+
 * Wind and water: waves are created by the interaction between wind and  the water surface. As soon as the waves exists, they create an extra roughness, resulting in eddies that can reinforce the waves even more (feedback loop).
+
+```{r Water, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='60%'}
+knitr::include_graphics(c('figures/Figure423.png'))
+```
 
 ### Local wind systems
 
 * Thermal Circulations: **a closed convection cell**. Sometimes very local over a few 100 meters.
 
+```{r ThermalCirc, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='60%'}
+knitr::include_graphics(c('figures/Figure424.png'))
+```
+
+
 * **Sea and Land Breezes**: a typical example of a convection cell. Water heats slowly (heat capacity), land warms up fast during the day. Creation of a sea breeze during the day. Cool wind blows into the land up to 50 km inland. Systems follows a day-night pattern, with a land breeze (less pronounced) during the night. 
+
+```{r Breezes, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='60%'}
+knitr::include_graphics(c('figures/Figure425.png'))
+```
 
 * **Mountain and Valley Breezes**: during the day the creation of local L zones on the slopes of the mountains. Valley breeze rises up to the mountain, cloud formation above mountain tops/ridges, summer thunderstorms in the Alps. During the night drainage winds (mountain breeze) sink into the valleys (cfr. themal belt in previous chapter). Day-night temperature variation is strongest in the valleys. 
 
+```{r Mountain, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='60%'}
+knitr::include_graphics(c('figures/Figure426.png'))
+```
+
 * **Katabatic Winds**: descending winds from mountain plateaus. Mistral wind in Rhone valley in France is descending from the Alps, can bring cool air in summer, but in spring it can bring frost and damage to vineyards.
+
+```{r Katabatic, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='60%'}
+knitr::include_graphics(c('figures/Figure427.png'))
+```
 
 * **Föhn (Alps) / Chinook (Rockies)** winds (cfr. Orographic cloud formation). Warm dry winds that descenc at the leeward side of a mountain. The driving wind system acts at a larger scale (not created local in the mountains), but the local properties if these winds (dry, warm) are initiated locally by the topography.
 
+```{r Fohn, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='60%'}
+knitr::include_graphics(c('figures/Figure428.png'))
+```
+
 * **Desert Winds**: local low pressure zones, with local convergence. Local sand storms in deserts or at large scale (Haboob).
+
+```{r DesertW, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='60%'}
+knitr::include_graphics(c('figures/Figure429.png'))
+```
 
 * **Sahara Winds**: warm and dry winds from H pressure zone in source area of Sahara (see lecture on air masses). Dry and warm winds, that have different names in different regions.
 
+```{r Sahara, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='60%'}
+knitr::include_graphics(c('figures/Figure430.png'))
+```
+
 * Seasonality changing winds: **The Monsoon**: This is a continental scale “local” wind system. You can consider it as a sea breeze at continental scale, and with a temporal cycle which is seasonal (winter /summer). During winter, the land is relatively colder, creating a H pressure zone. Wind is blowing away from the continent into the ocean, this is the dry season in SE Asia. 
-In summer, there is preferential heating of the land, creating a continental low-pressure zone. Warm and moist monsoon winds are blowing from the ocean to the land. Condensation (cloud formation) over the land releases extra latent heat, making the wet season extra hot and moist. This phenomenon is even strengthened due to orographic cloud formation towards the Himalaya. On top of that, melting water is coming in from the Himalaya in spring (something which is not occurring for the West African monsoon), leading to the well-known floodings in countries like Bangladesh. The West African monsoon has a similar mechanism. These countries are very depending on monsoon rains for agriculture, but extreme monsoons causes floodings…
+In summer, there is preferential heating of the land, creating a continental low-pressure zone. Warm and moist monsoon winds are blowing from the ocean to the land. Condensation (cloud formation) over the land releases extra latent heat, making the wet season extra hot and moist. This phenomenon is even strengthened due to orographic cloud formation towards the Himalaya. On top of that, melting water is coming in from the Himalaya in spring (something which is not occurring for the West African monsoon), leading to the well-known floodings in countries like Bangladesh. The West African monsoon has a similar mechanism. These countries are very depending on monsoon rains for agriculture, but extreme monsoons causes floodings.
+
+```{r Monsoon, fig.cap='Caption', out.width='80%', fig.asp=.75, fig.align='center',fig.show='hold',echo=FALSE,out.width='60%'}
+knitr::include_graphics(c('figures/Figure431.png'))
+```

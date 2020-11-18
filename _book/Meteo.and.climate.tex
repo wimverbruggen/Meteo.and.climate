@@ -32,46 +32,6 @@
 \usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{natbib}
 \bibliographystyle{apalike}
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
 \usepackage{longtable,booktabs}
 % Fix footnotes in tables (requires footnote package)
 \IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
@@ -120,6 +80,10 @@
 
 % Header and font 
 \usepackage{fancyhdr}
+\usepackage{float}
+
+\usepackage{amsmath,color}
+
 \pagestyle{fancy}
 \fancyhf{} % sets both header and footer to nothing
 \renewcommand{\headrulewidth}{0pt} % Remove line
@@ -127,24 +91,15 @@
 \fancyhead[L,C,R]{} % Empty header
 \fancyfoot[C]{\thepage} % Footer, center, page number
 \fancyfoot[L,R]{} % Empty footer on left and right
+
+\floatplacement{figure}{H}
+
+\usepackage[makeroom]{cancel}
 \usepackage{caption}
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{multirow}
-\usepackage{wrapfig}
-\usepackage{float}
-\usepackage{colortbl}
-\usepackage{pdflscape}
-\usepackage{tabu}
-\usepackage{threeparttable}
-\usepackage{threeparttablex}
-\usepackage[normalem]{ulem}
-\usepackage{makecell}
 
 \title{Vegetation modelling}
 \author{Hans Verbeeck, Louise Terryn, Félicien Meunier}
-\date{2020-11-17}
+\date{2020-11-18}
 
 \begin{document}
 \maketitle
@@ -278,20 +233,6 @@ radiation balance of the earth and thus climate change. We can also find
 for the hole in the ozon layer (again, low concentrations but very
 reactive).
 
-\begin{center}
-\captionof{table}{Example of Table}
-\label{table:example}
-\begin{tabular}{|l|l|l|l|}
-\hline
-Johnson Family & Transformation & Parameter Conditions & X Condition \\ \hline
-$S_B$ & $Z=\gamma + \eta ln(\frac {X - \epsilon} {\lambda + \epsilon - X})$ & $\eta, \lambda >0, -\infty < \gamma, \epsilon < \infty$ & $\epsilon < X < \epsilon + \lambda$ \\ \hline
-$S_L$ & $Z=\gamma + \eta ln(X - \epsilon)$ & $\eta >0, -\infty < \gamma, \epsilon < \infty$ & $X > \epsilon$ \\ \hline
-$S_U$ & $Z=\gamma + \eta \sinh^{-1}(\frac {X - \epsilon} {\lambda})$ & $\eta, \lambda >0, -\infty < \gamma, \epsilon < \infty$ & $-\infty < X < \infty$ \\ \hline
-\end{tabular}
-\end{center}
-
-We can easily refer to Table \ref{table:example}.
-
 Very important for weather is \textbf{water} in the atmosphere. It is
 the gas in the atmosphere which is present at the most variable
 concentrations. It is continuously present in the atmosphere in three
@@ -306,7 +247,7 @@ while condensation of water releases a lot of energy.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{figures/Figure1.1} 
+{\centering \includegraphics[width=0.8\linewidth]{figures/Figure11} 
 
 }
 
@@ -336,6 +277,15 @@ of the air above it. If you are on top of the mount Everest (5.5 km
 high) you are above 50\% of the air molecules. In this way we can look
 at the atmosphere vertically.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure12a} \includegraphics[width=0.4\linewidth]{figures/Figure12b} 
+
+}
+
+\caption{Caption}\label{fig:Layers}
+\end{figure}
+
 However, in meteorology we mostly look at \textbf{the vertical
 temperature profile}. Based on this profile the atmosphere is divided in
 layers. One of the only ways to measure a vertical temperature profile
@@ -364,10 +314,28 @@ react very strongly with incoming solar radiation, and solar winds.
 Dependent on the solar activity the temperature curve will look
 differently (there is no buffer effect from the stratosphere here).
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{figures/Figure13} 
+
+}
+
+\caption{Here is the first figure}\label{fig:Layer2}
+\end{figure}
+
 \textbf{Homosphere} is the lower part of the atmosphere where the
 chemical composition is very constant (except ozone in ozone layer)
 while in the \textbf{heterosphere} is very variable because of the
 interaction with solar radiation.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure14a} \includegraphics[width=0.4\linewidth]{figures/Figure14b} 
+
+}
+
+\caption{Caption}\label{fig:Homosphere}
+\end{figure}
 
 10 km is the average \textbf{thickness of the troposphere}. Because of
 the earth rotation the height of the tropopause is highest at the
@@ -377,6 +345,15 @@ lower layer because there is more warming of the earth surface.
 Therefore, the highest clouds found in Belgium are at around 10 km high
 while in the tropics this will be almost double the height (till 18 km
 high) and at the poles only 6 or 7 km high.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure15} 
+
+}
+
+\caption{Here is the first figure}\label{fig:Thickness}
+\end{figure}
 
 \section{Meteorology and
 ecoclimatology}\label{meteorology-and-ecoclimatology}
@@ -408,6 +385,15 @@ we are on this curve, while climate models want to predict how this full
 curve will look at the end of the century, and not where we will be on
 the curve on the 25 of October 2098.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure16a} \includegraphics[width=0.4\linewidth]{figures/Figure16b} 
+
+}
+
+\caption{Caption}\label{fig:Climatedef}
+\end{figure}
+
 \subsection{History of meteorology}\label{history-of-meteorology}
 
 \textbf{Aristotle} was a philosopher but also the first meteorologist
@@ -430,6 +416,24 @@ based on the combination of these different components (e.g.~weather
 stations, remote sensing, climate models). Finality of the part
 meteorology in this course is reading and interpreting weather maps that
 synthesize al key weather elements.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure17} 
+
+}
+
+\caption{Here is the first figure}\label{fig:History1}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure18} 
+
+}
+
+\caption{Here is the first figure}\label{fig:History2}
+\end{figure}
 
 \subsection{Weather and climate in our daily
 lives}\label{weather-and-climate-in-our-daily-lives}
@@ -476,6 +480,24 @@ environmental issues/problems have to be studied within the
 biogeosciences, especially when we want to look at the anthropogenic
 impact.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure19} 
+
+}
+
+\caption{Here is the first figure}\label{fig:Biogeoscience}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure110} 
+
+}
+
+\caption{Here is the first figure}\label{fig:Biogeoscience2}
+\end{figure}
+
 A good example of the role of vegetation in land-atmopshere interactions
 is the given by forests. Forest provide ecosystem services, but these
 are dependent on the type of forest (e.g.~a tropical rainforest versus a
@@ -508,6 +530,24 @@ impact on the amount of aerosols in the atmosphere (also when a forest
 burns this brings a lot of particles in the air). Ecoclimatology studies
 many of these elements.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure112} 
+
+}
+
+\caption{Here is the first figure}\label{fig:Land}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure113} 
+
+}
+
+\caption{Here is the first figure}\label{fig:Land2}
+\end{figure}
+
 \section{Energy, temperature and
 heat}\label{energy-temperature-and-heat}
 
@@ -529,6 +569,24 @@ volume it is confined in). Temperature is measured in ° Celsius,
 Fahrenheit, Kelvin (most scientific scale). The average temperature on
 earth is typically 15 °C, but weather stations typically measure
 variations between -30 °C up to 40 °C.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure114} 
+
+}
+
+\caption{Here is the first figure}\label{fig:Temperature}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure115} 
+
+}
+
+\caption{Here is the first figure}\label{fig:Temperature2}
+\end{figure}
 
 \subsection{Specific heat}\label{specific-heat}
 
@@ -559,6 +617,15 @@ climate system (e.g.~when a cloud forms water vapor will condensate to
 form water droplets which is accompanied by a release of energy to the
 environment.)
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure116} 
+
+}
+
+\caption{Here is the first figure}\label{fig:LSheat}
+\end{figure}
+
 \subsection{Heat transfer in the
 atmosphere}\label{heat-transfer-in-the-atmosphere}
 
@@ -576,6 +643,24 @@ There is only a small amount of heat that is transferred via conduction
 from the soil to the first layers of air above it. The largest heat
 fluxes on earth are governed by radiation and convection.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure117} 
+
+}
+
+\caption{Here is the first figure}\label{fig:Heattransfer}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure118} 
+
+}
+
+\caption{Here is the first figure}\label{fig:Heattransfer2}
+\end{figure}
+
 \textbf{Convection} happens when the sun heats a specific spot on the
 earth (for example a dark plowed field that heats up more than the
 grassland surrounding it), the air above this hot surface heats up and
@@ -587,6 +672,15 @@ this can be energy a gas or pollutants (e.g.~cold air or pollutant
 sliding of a mountain) while convection is the three dimensional
 transfer of heat through hot air bubbles.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure119} 
+
+}
+
+\caption{Here is the first figure}\label{fig:Heattransfer3}
+\end{figure}
+
 \section{Radiation}\label{radiation}
 
 Radiation is electromagnetic waves which don't heat the medium (air).
@@ -594,6 +688,15 @@ Direct sun rays lose almost no energy before reaching earth. The
 \textbf{wavelength} of radiation determines its energy. A quantum of
 light with a high frequency (short wavelength) has more energy than one
 with a high wavelength.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure120} 
+
+}
+
+\caption{Here is the first figure}\label{fig:Radiation}
+\end{figure}
 
 \subsection{Important laws}\label{important-laws}
 
@@ -605,6 +708,9 @@ certain wavelength (lambda):
   \label{eq:Eq1}
 \end{equation}
 
+h = 6.626 x 10-34 J s (planck's constant) c = 3 x 108 m s-1 (speed of
+light)
+
 We can also easily refer to Equations, see Eq. \eqref{eq:Eq1}.
 
 Secondly, \textbf{Planck's law} relates the radiant flux density per
@@ -612,12 +718,30 @@ unit wavelength emitted by a black body (W m-2 m-1) to the wavelength
 (lambda) and temperature (T) (e.g.~spectrum of the sun when you fill in
 T of the sun):
 
+\begin{equation} 
+  E(\Lambda) =\frac{2 \pi h c^2}{\Lambda^5\left(exp(hc/k\Lambda T) - 1 \right)}
+  \label{eq:Eq2}
+\end{equation}
+
 Thirdly, \textbf{Wien's displacement law} relates the wavelength of
 maximum emission to the temperature of a black body:
+
+\begin{equation} 
+  \Lambda_{max} = 2897 \mu m K / T 
+  \label{eq:Eq3}
+\end{equation}
 
 Lastly, the \textbf{Stefan-Boltzmann law} relates the radiant flux
 density emitted by an object (E) to its temperature obtained by
 integrating over all wavelengths:
+
+\begin{equation} 
+  E = \epsilon \sigma T^4
+  \label{eq:Eq4}
+\end{equation}
+
+E (Emittance W m-2) σ = 5.67 x 10--8 W m--2 K--4 (Stefan--Boltzmann
+constant) ε (broadband emissivity)
 
 These laws are summarized in the figure which gives the spectrum of
 emitted energy for the sun and the earth (unit: W m-2 µm-1 -- the energy
@@ -632,6 +756,15 @@ earth emits \textbf{longwave} (invisible) radiation (lambda max at 10
 components). Thus, the sun emits compared to the earth, radiation of a
 different quality and quantity.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure121} 
+
+}
+
+\caption{Caption}\label{fig:Laws}
+\end{figure}
+
 \subsection{The sun's EM spectrum}\label{the-suns-em-spectrum}
 
 This figure shows the percentages of solar-energy in the different
@@ -639,6 +772,15 @@ wavelength bands. Almost everything is infrared (37+11) and visible
 light (44). Only a few percentages are UV light, however, containing a
 lot of energy (ozon layer protects us from this). This is the spectrum
 that reaches the earth before entering the atmosphere.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure122} 
+
+}
+
+\caption{Caption}\label{fig:Spectrum}
+\end{figure}
 
 \subsection{Absorption, reflection and
 transmission}\label{absorption-reflection-and-transmission}
@@ -648,6 +790,15 @@ of the radiation with the molecules in the atmosphere and the earth
 surface (this changes the nice curve from before). The radiation can be
 reflected, absorbed or transmitted (e.g.~light transmitted through the
 leaves of a tree).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure123} 
+
+}
+
+\caption{Caption}\label{fig:Spectrum2}
+\end{figure}
 
 \subsection{Scattering}\label{scattering}
 
@@ -669,6 +820,33 @@ scattering, the intensity is not proportional to the wavelength, every
 wavelength is scattered equally in all directions (this is why clouds
 look white or grey).
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure124} 
+
+}
+
+\caption{Caption}\label{fig:Scattering}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure125} 
+
+}
+
+\caption{Caption}\label{fig:Scattering2}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure126} 
+
+}
+
+\caption{Caption}\label{fig:Scattering3}
+\end{figure}
+
 \subsection{Direct and diffuse
 radiation}\label{direct-and-diffuse-radiation}
 
@@ -682,6 +860,15 @@ always measures the direct shortwave radiation perpendicular (Sb), we
 correct for the solar elevation (β): Sh=Sb x sinβ. On average we would
 measure 740 Watt/m2 at noon on a sunny day in Belgium.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure127} 
+
+}
+
+\caption{Caption}\label{fig:Diffuse}
+\end{figure}
+
 This figure shows the shortwave radiation coming from the sun measured
 at the earth surface (during a cloudy day). Compared to the radiation
 measured at the top of the atmosphere certain wavelengths have vanished.
@@ -691,6 +878,15 @@ coming from direct radiation. The quality is also different, the peak in
 diffuse radiation can be found in the shorter wavelengths (blue light).
 Plants can efficiently use these wavelengths present in diffuse
 radiation.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure128} 
+
+}
+
+\caption{Caption}\label{fig:Diffuse2}
+\end{figure}
 
 These figures present the sensitivity of the human eye and the
 sensitivity of plants to light. Plants typically absorb (pigments in the
@@ -708,6 +904,24 @@ can be 2000 µmol m-2 s-1 PAR radiation. The PAR fraction in diffuse and
 direct light depends on the solar elevation (Table) at lower solar
 elevation the path length through the atmosphere of (especially direct)
 light is longer, blue light is scatter out, less PAR remains.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure129} 
+
+}
+
+\caption{Caption}\label{fig:PAR}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure130} 
+
+}
+
+\caption{Caption}\label{fig:PAR2}
+\end{figure}
 
 \subsection{Selective
 absorbers/emitters}\label{selective-absorbersemitters}
@@ -730,6 +944,15 @@ earth loses energy via longwave radiation). However, this atmospheric
 window can be closed by clouds which is why a clear night is cooler than
 a cloudy night.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure131} 
+
+}
+
+\caption{Caption}\label{fig:atmwindow}
+\end{figure}
+
 \subsection{Greenhouse effect}\label{greenhouse-effect}
 
 When there would be no greenhouse effect (no selective absorbers), the
@@ -739,6 +962,15 @@ this greenhouse effect resulting in a livable temperature (15°C on
 average) on earth. However, the problem is the increased greenhouse
 effect and not the greenhouse gases as such.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure132} 
+
+}
+
+\caption{Caption}\label{fig:GHG}
+\end{figure}
+
 \section{Energy balance}\label{energy-balance}
 
 \subsection{Radiation balance}\label{radiation-balance}
@@ -747,6 +979,15 @@ When making an energy balance of the planet, we consider the solar
 constant. This is the energy that we continuously receive from the sun
 at the top of the atmosphere (= on average during the day we would
 measure at the top of the atmosphere 1360 W per square meter).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure133} 
+
+}
+
+\caption{Caption}\label{fig:RadBalance}
+\end{figure}
 
 As we have seen before, when this energy from the sun enters our
 atmosphere there is interaction with molecules in the atmosphere
@@ -766,9 +1007,23 @@ relatively cold objects (such as the clouds and molecules in the
 atmosphere (Ld) and the earth surface (σ T04)) emit longwave radiation.
 Finally, the net radiation balance is:
 
+\begin{equation} 
+  R_n = (1 - \alpha)S_t + L_d - \sigma T_0^{4}
+  \label{eq:EqNetRadiation}
+\end{equation}
+
 The net radiation (the energy the system receives -- energy the system
 loses) is the radiation which is available for the system to for example
 heat the air or for evaporation.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure134} 
+
+}
+
+\caption{Caption}\label{fig:RadiationAlbedo}
+\end{figure}
 
 The \textbf{albedo}, the reflectivity of the earth surface, is variable
 and depends on the color of a surface. Forests (dark) and water surfaces
@@ -778,6 +1033,15 @@ albedo) show us that the highest albedos can be found in places covered
 with snow and ice or in the desert, while places with a lot of
 vegetation like forests in the tropics or temperate areas have a low
 albedo.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure135} 
+
+}
+
+\caption{Caption}\label{fig:albedo}
+\end{figure}
 
 The next two figures are examples of the diurnal cycle of the components
 of the radiation balance, where we can see the different components
@@ -793,6 +1057,24 @@ losing energy (no incoming shortwave, only longwave deficit) while
 during the day energy is won, when the net shortwave radiation (surface
 between the two shortwave curves) is larger than the longwave deficit.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure136} 
+
+}
+
+\caption{Caption}\label{fig:RadiationCycle}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure137} 
+
+}
+
+\caption{Caption}\label{fig:RadiationCycle2}
+\end{figure}
+
 When we make the \textbf{radiation balance} for the planet with incoming
 solar constant equalling 100 units, we see that only 51 units will reach
 the earth because 30 units are reflected in the atmosphere, by clouds or
@@ -801,10 +1083,24 @@ clouds. This is the average radiation balance of the earth (because
 there is a large variation in local rardiation balances for different
 places and at different moments in time).
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure138} 
+
+}
+
+\caption{Caption}\label{fig:RadiationBal}
+\end{figure}
+
 \subsection{Energy balance}\label{energy-balance-1}
 
 The net radiation we calculate from the radiation balance is part of the
 input of the energy balance.
+
+\begin{equation} 
+  R_n + \cancel{M} = \lambda E + H + G + S
+  \label{eq:EqEnergyBalance}
+\end{equation}
 
 The \textbf{energy balance of the earth} describes what happens with the
 \textbf{net radiation} that the earth receives from the sun. So on the
@@ -841,10 +1137,37 @@ reflected (like in the radiation balance) but the longwave balance also
 includes the latent and sensible heat in addition to the longwave
 radiation.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure139} 
+
+}
+
+\caption{Caption}\label{fig:EnergyBudget}
+\end{figure}
+
 The energy budget can be considered in different ways (see figures, say
 the same thing but with different numbers). The last figure is not based
 on 100 units of solar radiation coming in, but on 341 W m-2 which is the
 average incoming solar radiation over a full year globally.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure140} 
+
+}
+
+\caption{Caption}\label{fig:EnergyBudget2}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure141} 
+
+}
+
+\caption{Caption}\label{fig:EnergyBudget3}
+\end{figure}
 
 So the energy balance of the earth is on average in balance but this
 \textbf{balance can shift (Climate change)}. Climate change (natural or
@@ -859,6 +1182,15 @@ surface, can change in time (vegetation cover, urbanisation, melting
 polar ice caps). So the energy balance is in balance when considering
 years but can change on the long term.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure142} 
+
+}
+
+\caption{Caption}\label{fig:EnergyBudget4}
+\end{figure}
+
 However, locally there is no balance (there is an \textbf{imbalance
 according to latitude}). Locally, we receive more energy at the tropics
 and less at the poles. Long wave deficit is larger at the equator
@@ -867,6 +1199,15 @@ equator and lose energy at the poles. So there is a continuous surplus
 at the tropics and deficit at the poles. Therefore, there are continuous
 heat transfers from the equator to the poles which drives the climate
 system.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure143} 
+
+}
+
+\caption{Caption}\label{fig:EnergyBudget5}
+\end{figure}
 
 \section{Extra: Aurora borealis}\label{extra-aurora-borealis}
 
@@ -877,6 +1218,33 @@ emit charged particles. These particles are deflected and reach the
 atmosphere near the poles. They react with molecules in the atmosphere
 which then are excited. When the electrons fall back, they emit light
 (polar light).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure144} 
+
+}
+
+\caption{Caption}\label{fig:borealis}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure145} 
+
+}
+
+\caption{Caption}\label{fig:borealis2}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/Figure146} 
+
+}
+
+\caption{Caption}\label{fig:borealis3}
+\end{figure}
 
 \chapter{Temperature, humidity and
 clouds}\label{temperature-humidity-and-clouds}
@@ -1217,12 +1585,12 @@ southern hemisphere.
 \subsection{Temperature scales}\label{temperature-scales}
 
 \begin{equation} 
-   K = °C + 273.13
+   K = ^{\circ}C + 273.13
    \label{eq:EqK}
 \end{equation}
 
 \begin{equation} 
-   °C = 5/9 \left(°F - 32 \right)
+   ^{\circ}C = 5/9 \left(^{\circ}F - 32 \right)
    \label{eq:EqF}
 \end{equation}
 
@@ -1583,167 +1951,6 @@ precipitation}\label{atmospheric-stability-cloud-development-precipitation}
 
 \chaptermark{Atm}
 
-\begin{longtable}[]{@{}lrrrrrr@{}}
-\caption{\label{tab:unnamed-chunk-1}Example of table directly from
-R}\tabularnewline
-\toprule
-& mpg & cyl & disp & hp & drat & wt\tabularnewline
-\midrule
-\endfirsthead
-\toprule
-& mpg & cyl & disp & hp & drat & wt\tabularnewline
-\midrule
-\endhead
-Mazda RX4 & 21.0 & 6 & 160 & 110 & 3.90 & 2.620\tabularnewline
-Mazda RX4 Wag & 21.0 & 6 & 160 & 110 & 3.90 & 2.875\tabularnewline
-Datsun 710 & 22.8 & 4 & 108 & 93 & 3.85 & 2.320\tabularnewline
-Hornet 4 Drive & 21.4 & 6 & 258 & 110 & 3.08 & 3.215\tabularnewline
-Hornet Sportabout & 18.7 & 8 & 360 & 175 & 3.15 & 3.440\tabularnewline
-Valiant & 18.1 & 6 & 225 & 105 & 2.76 & 3.460\tabularnewline
-\bottomrule
-\end{longtable}
-
-Lorem ipsum dolor sit amet, fermentum ornare morbi sociosqu dictumst. In
-malesuada nulla aliquam id tellus ridiculus eu. Ac id ridiculus nec
-commodo in feugiat in. Parturient amet eget suspendisse diam non platea
-justo. Elementum ac lacus cubilia nulla vestibulum eu, egestas. Nec non
-urna mi et, malesuada enim. Vitae at amet varius erat. Aenean nunc
-commodo sodales accumsan, nec dui posuere nec elit, etiam. Maximus
-faucibus magnis penatibus euismod vestibulum, tempor turpis. Ac,
-tincidunt potenti felis enim morbi blandit, accumsan bibendum vitae
-nulla senectus dictum. Ac ac sagittis ut in quam nec gravida etiam a
-conubia ex.
-
-Ut non, venenatis in, scelerisque in sed, interdum ipsum. Non imperdiet,
-sagittis, erat tempor. Pretium ligula, augue curabitur mi luctus nam
-auctor fames? Tellus tristique rutrum integer fermentum dapibus,
-vehicula nascetur. Ante fringilla orci, nostra maximus tempus! Donec non
-ligula in eu sociis sed tincidunt purus nunc. Orci nam conubia dis orci
-lacus. In aenean leo quis enim convallis, sagittis massa. Odio varius
-duis nec diam quam quis in condimentum et. Amet id, interdum vestibulum
-et diam quam litora eget vitae eget pharetra. Maecenas eget, donec
-pretium sit in condimentum ut lobortis, eu. Non, eget sed. Cras laoreet
-ut et a, maecenas magna inceptos malesuada.
-
-At odio phasellus. Vel, sagittis dictumst cum litora rhoncus. Elementum
-suspendisse. Metus porttitor netus interdum tristique ornare augue.
-Faucibus nibh amet, imperdiet commodo nisl consectetur semper. Suscipit
-lacus, ut iaculis nibh, et sit. Sapien lorem dolor interdum in dictum.
-Faucibus, eleifend quis, dapibus sed. Nam purus porttitor nulla
-facilisis varius amet in in blandit.
-
-\begin{longtable}[]{@{}lll@{}}
-\caption{\label{tab:unnamed-chunk-2}Example of table from
-Bonan}\tabularnewline
-\toprule
-Type.of.model & Description & Example\tabularnewline
-\midrule
-\endfirsthead
-\toprule
-Type.of.model & Description & Example\tabularnewline
-\midrule
-\endhead
-Biogeochemical & Ecosystem models with emphasis & TEM,
-CASA\tabularnewline
-Forst gap models & Individual trees & FORET\tabularnewline
-Ecosystem demography & As in gap models & ED\tabularnewline
-\bottomrule
-\end{longtable}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.8\linewidth]{Meteo.and.climate_files/figure-latex/<nice2>-1} 
-
-}
-
-\caption{Here is a second figure! It was generated in R}(\#fig:<nice2>)
-\end{figure}
-
-You can label chapter and section titles using \texttt{\{\#label\}}
-after them, e.g., we can reference Chapter \ref{intro}. If you do not
-manually label them, there will be automatic labels anyway.
-
-Figures and tables with captions will be placed in \texttt{figure} and
-\texttt{table} environments, respectively.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{par}\NormalTok{(}\DataTypeTok{mar =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, .}\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
-\KeywordTok{plot}\NormalTok{(pressure, }\DataTypeTok{type =} \StringTok{'b'}\NormalTok{, }\DataTypeTok{pch =} \DecValTok{19}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.8\linewidth]{Meteo.and.climate_files/figure-latex/nice-fig-1} 
-
-}
-
-\caption{Here is a nice figure!}\label{fig:nice-fig}
-\end{figure}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.8\linewidth]{figures/Figure_course} 
-
-}
-
-\caption{Here is a second figure!}\label{fig:nice-fig2}
-\end{figure}
-
-\[\begin{array}{ccc}
-x_{11} & x_{12} & x_{13}\\
-x_{21} & x_{22} & x_{23}
-\end{array}\]
-
-Reference a figure by its code chunk label with the \texttt{fig:}
-prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can
-reference tables generated from \texttt{knitr::kable()}, e.g., see Table
-\ref{tab:nice-tab}.
-
-\begin{longtable}[]{@{}rrrrl@{}}
-\caption{\label{tab:nice-tab}Here is a nice table!}\tabularnewline
-\toprule
-Sepal.Length & Sepal.Width & Petal.Length & Petal.Width &
-Species\tabularnewline
-\midrule
-\endfirsthead
-\toprule
-Sepal.Length & Sepal.Width & Petal.Length & Petal.Width &
-Species\tabularnewline
-\midrule
-\endhead
-5.1 & 3.5 & 1.4 & 0.2 & setosa\tabularnewline
-4.9 & 3.0 & 1.4 & 0.2 & setosa\tabularnewline
-4.7 & 3.2 & 1.3 & 0.2 & setosa\tabularnewline
-4.6 & 3.1 & 1.5 & 0.2 & setosa\tabularnewline
-5.0 & 3.6 & 1.4 & 0.2 & setosa\tabularnewline
-5.4 & 3.9 & 1.7 & 0.4 & setosa\tabularnewline
-4.6 & 3.4 & 1.4 & 0.3 & setosa\tabularnewline
-5.0 & 3.4 & 1.5 & 0.2 & setosa\tabularnewline
-4.4 & 2.9 & 1.4 & 0.2 & setosa\tabularnewline
-4.9 & 3.1 & 1.5 & 0.1 & setosa\tabularnewline
-5.4 & 3.7 & 1.5 & 0.2 & setosa\tabularnewline
-4.8 & 3.4 & 1.6 & 0.2 & setosa\tabularnewline
-4.8 & 3.0 & 1.4 & 0.1 & setosa\tabularnewline
-4.3 & 3.0 & 1.1 & 0.1 & setosa\tabularnewline
-5.8 & 4.0 & 1.2 & 0.2 & setosa\tabularnewline
-5.7 & 4.4 & 1.5 & 0.4 & setosa\tabularnewline
-5.4 & 3.9 & 1.3 & 0.4 & setosa\tabularnewline
-5.1 & 3.5 & 1.4 & 0.3 & setosa\tabularnewline
-5.7 & 3.8 & 1.7 & 0.3 & setosa\tabularnewline
-5.1 & 3.8 & 1.5 & 0.3 & setosa\tabularnewline
-\bottomrule
-\end{longtable}
-
-You can write citations, too. For example, we are using the
-\textbf{bookdown} package \citep{R-bookdown} in this sample book, which
-was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
-
-\[
-  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
-\]
-
 \chapter{Pressures and winds}\label{pressures-and-winds}
 
 \chaptermark{PandW}
@@ -1833,8 +2040,9 @@ between the two columns, an air pressure difference at the surface in
 initiated, resulting in surface winds and the \textbf{creation of a
 convection cell}.
 
-\includegraphics{figures/Figure41a.png}
-\includegraphics{figures/Figure41b.png}
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{figures/Figure41andb} \caption{Figure caption}\label{fig:airpressure}
+\end{figure}
 
 \subsubsection{Daily Pressure
 Variations}\label{daily-pressure-variations}
@@ -1848,6 +2056,15 @@ In the \textbf{tropics} we see a typical diurnal pattern with high
 pressure in the morning and lower pressure in the afternoon. This
 pattern is called the `\textbf{atmospheric tides}'.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{figures/Figure42} 
+
+}
+
+\caption{Caption}\label{fig:dailyP}
+\end{figure}
+
 \subsection{Pressure measurements}\label{pressure-measurements}
 
 \subsubsection{Pressure measurements}\label{pressure-measurements-1}
@@ -1858,6 +2075,15 @@ variations are induced by relatively small pressure differences between
 (e.g; Siberia), extreme low pressures are found in the centre of low
 pressure zones, storms and hurricanes.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure43} 
+
+}
+
+\caption{Caption}\label{fig:Pmes}
+\end{figure}
+
 \subsubsection{Altiltude corrections}\label{altiltude-corrections}
 
 Pressure observation are strongly influenced by the altitude. Without
@@ -1867,6 +2093,15 @@ pressure decay) we find a map representing the actual pressure gradient,
 on which \textbf{isobars} represent points of equal pressure. Smoothing
 of the isobars to get rid of local disturbances and get a clearer view
 on the general trend in pressure.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure44} 
+
+}
+
+\caption{Caption}\label{fig:Altcorrec}
+\end{figure}
 
 \subsection{Weather charts}\label{weather-charts}
 
@@ -1913,6 +2148,15 @@ to L pressure. When isobars are close to each other, the PGF is higher.
 Wind speed is not determined by the absolute pressure value in an area,
 but by the gradient, thus by the density of the isobars.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure45a} \includegraphics[width=0.4\linewidth]{figures/Figure45b} 
+
+}
+
+\caption{Caption}\label{fig:Pgradforce}
+\end{figure}
+
 \subsection{Coriolis force}\label{coriolis-force}
 
 The Coriolis force is rather an \textbf{observer effect} than an actual
@@ -1926,6 +2170,15 @@ stronger the deviation, the latitude (the closer to the poles, the
 greater the effect) and the speed of the object (the higher the wind
 speed, the stronger the deviation).
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure46} 
+
+}
+
+\caption{Caption}\label{fig:Coriolis}
+\end{figure}
+
 \subsection{Friction}\label{friction}
 
 The friction force depends on the roughness of the surface and is only
@@ -1933,6 +2186,15 @@ having an influence in the \textbf{planetary boundary layer} (first
 \textasciitilde{}1 km of the troposphere). More roughness results in
 more turbulence and a stronger friction. Friction is working in the
 opposite direction of the wind direction.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure47} 
+
+}
+
+\caption{Caption}\label{fig:Friction}
+\end{figure}
 
 \section{Geostrophic, gradient, surface
 winds}\label{geostrophic-gradient-surface-winds}
@@ -1945,11 +2207,29 @@ the Coriolis effect. These winds are responsible for the feather-effect
 of cirrus clouds and for the formation of the anvil top of a
 cumulonimbus cloud.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure48} 
+
+}
+
+\caption{Caption}\label{fig:Geos}
+\end{figure}
+
 When a theoretical parcel of air is `released', there is only the PGF.
 As soon as the parcels starts to move due to the PGF, there is a
 deviation to the right (Coriolis). An equilibrium is reached when both
 forces are equal and opposite, and the resulting force is zero. The
 parcel will keep moving with constant speed in parallel to the isobars.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure49} 
+
+}
+
+\caption{Caption}\label{fig:PGF}
+\end{figure}
 
 Geostrophic winds are comparable to a river. The flow is faster when the
 river is narrower, while the discharge is constant, the same happens for
@@ -1975,13 +2255,40 @@ with L pressure centres (cyclones).
 
 \subsubsection{Cyclonic flox (NH)}\label{cyclonic-flox-nh}
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure410} 
+
+}
+
+\caption{Caption}\label{fig:CF}
+\end{figure}
+
 \subsubsection{Anticyclonic Flow (NH)}\label{anticyclonic-flow-nh}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure411} 
+
+}
+
+\caption{Caption}\label{fig:ACF}
+\end{figure}
 
 \subsubsection{NH vs SH}\label{nh-vs-sh}
 
 In the Northern hemisphere gradient winds rotate counter clockwise
 around L pressure zone, while the opposite happens in the Southern
 hemisphere.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure412} 
+
+}
+
+\caption{Caption}\label{fig:NHSH}
+\end{figure}
 
 \subsection{Surface winds}\label{surface-winds}
 
@@ -1998,7 +2305,25 @@ the higher the angle alfa.
 
 NH: winds are converging counter clockwise in a L pressure zone.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure413} 
+
+}
+
+\caption{Caption}\label{fig:CW}
+\end{figure}
+
 SH: winds are converging clockwise in a L pressure zone
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure414} 
+
+}
+
+\caption{Caption}\label{fig:ACW}
+\end{figure}
 
 \subsection{Buys-Balot}\label{buys-balot}
 
@@ -2007,6 +2332,15 @@ where H and L pressure centres are located based on the observed wind
 direction. Keep in mind that you have to account for an angle of 30°
 when surface winds are used as a reference. When this rule is applied
 for the Southern hemisphere, H and L switch places.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure415} 
+
+}
+
+\caption{Caption}\label{fig:Buys}
+\end{figure}
 
 \subsection{Vertical air motions}\label{vertical-air-motions}
 
@@ -2024,11 +2358,29 @@ isobars. In that case convergence and divergence is realized by changing
 distances between the isobars and the complex 3D structure of the
 pressure surfaces.
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure416} 
+
+}
+
+\caption{Caption}\label{fig:VAR}
+\end{figure}
+
 \section{Small scale and local wind
 systems}\label{small-scale-and-local-wind-systems}
 
 \subsection{Scales of atmospheric
 motion}\label{scales-of-atmospheric-motion}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure417} 
+
+}
+
+\caption{Caption}\label{fig:scales}
+\end{figure}
 
 \begin{itemize}
 \tightlist
@@ -2057,29 +2409,92 @@ motion}\label{scales-of-atmospheric-motion}
 produces wind gusts and eddies.
 
 \begin{itemize}
+\tightlist
 \item
   \textbf{Thermal and mechanical turbulence}. Larger turbulence in
   unstable conditions (surface heating during the day).
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure418} 
+
+}
+
+\caption{Caption}\label{fig:Thermal}
+\end{figure}
+
+\begin{itemize}
+\tightlist
 \item
   \textbf{Wind speed profile}: up to 1 km height, there is influence of
   the earth surface. The shape of the wind profile depends on: the
   stability (surface heating), roughness of the earth surface, wind
   speed. In case of high mixing, the profile will be more linear.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure419} 
+
+}
+
+\caption{Caption}\label{fig:Profile}
+\end{figure}
+
+\begin{itemize}
+\tightlist
 \item
   \textbf{Eddies}: are not always vertical. See example of horizontal
   eddies on slide 41 of the lecture (islands). Eddies associated with
   lenticular cloud formation.
 \end{itemize}
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure420} 
+
+}
+
+\caption{Caption}\label{fig:Eddies}
+\end{figure}
+
 \textbf{Interaction with surface}:
 
 \begin{itemize}
+\tightlist
 \item
   Wind and soil: interaction between very local wind systems and the
   surfaces (e.g.~sand dunes)
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure421} 
+
+}
+
+\caption{Caption}\label{fig:Soil}
+\end{figure}
+
+\begin{itemize}
+\tightlist
 \item
   Wind and vegetation: shelterbelts, hedgerows in the landscape to
   protect croplands, or to create a microclimate in croplands.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figures/Figure422} 
+
+}
+
+\caption{Caption}\label{fig:Vegetation}
+\end{figure}
+
+\begin{itemize}
+\tightlist
 \item
   Wind and water: waves are created by the interaction between wind and
   the water surface. As soon as the waves exists, they create an extra
@@ -2087,18 +2502,54 @@ produces wind gusts and eddies.
   (feedback loop).
 \end{itemize}
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{figures/Figure423} 
+
+}
+
+\caption{Caption}\label{fig:Water}
+\end{figure}
+
 \subsection{Local wind systems}\label{local-wind-systems}
 
 \begin{itemize}
+\tightlist
 \item
   Thermal Circulations: \textbf{a closed convection cell}. Sometimes
   very local over a few 100 meters.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{figures/Figure424} 
+
+}
+
+\caption{Caption}\label{fig:ThermalCirc}
+\end{figure}
+
+\begin{itemize}
+\tightlist
 \item
   \textbf{Sea and Land Breezes}: a typical example of a convection cell.
   Water heats slowly (heat capacity), land warms up fast during the day.
   Creation of a sea breeze during the day. Cool wind blows into the land
   up to 50 km inland. Systems follows a day-night pattern, with a land
   breeze (less pronounced) during the night.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{figures/Figure425} 
+
+}
+
+\caption{Caption}\label{fig:Breezes}
+\end{figure}
+
+\begin{itemize}
+\tightlist
 \item
   \textbf{Mountain and Valley Breezes}: during the day the creation of
   local L zones on the slopes of the mountains. Valley breeze rises up
@@ -2106,24 +2557,89 @@ produces wind gusts and eddies.
   thunderstorms in the Alps. During the night drainage winds (mountain
   breeze) sink into the valleys (cfr. themal belt in previous chapter).
   Day-night temperature variation is strongest in the valleys.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{figures/Figure426} 
+
+}
+
+\caption{Caption}\label{fig:Mountain}
+\end{figure}
+
+\begin{itemize}
+\tightlist
 \item
   \textbf{Katabatic Winds}: descending winds from mountain plateaus.
   Mistral wind in Rhone valley in France is descending from the Alps,
   can bring cool air in summer, but in spring it can bring frost and
   damage to vineyards.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{figures/Figure427} 
+
+}
+
+\caption{Caption}\label{fig:Katabatic}
+\end{figure}
+
+\begin{itemize}
+\tightlist
 \item
   \textbf{Föhn (Alps) / Chinook (Rockies)} winds (cfr. Orographic cloud
   formation). Warm dry winds that descenc at the leeward side of a
   mountain. The driving wind system acts at a larger scale (not created
   local in the mountains), but the local properties if these winds (dry,
   warm) are initiated locally by the topography.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{figures/Figure428} 
+
+}
+
+\caption{Caption}\label{fig:Fohn}
+\end{figure}
+
+\begin{itemize}
+\tightlist
 \item
   \textbf{Desert Winds}: local low pressure zones, with local
   convergence. Local sand storms in deserts or at large scale (Haboob).
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{figures/Figure429} 
+
+}
+
+\caption{Caption}\label{fig:DesertW}
+\end{figure}
+
+\begin{itemize}
+\tightlist
 \item
   \textbf{Sahara Winds}: warm and dry winds from H pressure zone in
   source area of Sahara (see lecture on air masses). Dry and warm winds,
   that have different names in different regions.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{figures/Figure430} 
+
+}
+
+\caption{Caption}\label{fig:Sahara}
+\end{figure}
+
+\begin{itemize}
+\tightlist
 \item
   Seasonality changing winds: \textbf{The Monsoon}: This is a
   continental scale ``local'' wind system. You can consider it as a sea
@@ -2141,8 +2657,17 @@ produces wind gusts and eddies.
   occurring for the West African monsoon), leading to the well-known
   floodings in countries like Bangladesh. The West African monsoon has a
   similar mechanism. These countries are very depending on monsoon rains
-  for agriculture, but extreme monsoons causes floodings\ldots{}
+  for agriculture, but extreme monsoons causes floodings.
 \end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{figures/Figure431} 
+
+}
+
+\caption{Caption}\label{fig:Monsoon}
+\end{figure}
 
 \part{Weather and climate
 systems/processes}\label{part-weather-and-climate-systemsprocesses}

@@ -117,12 +117,12 @@ We can also see that near **water-land transitions**, there are kinks in the iso
 ### Temperature scales
 
 \begin{equation} 
-   K = °C + 273.13
+   K = ^{\circ}C + 273.13
    (\#eq:EqK)
 \end{equation}
 
 \begin{equation} 
-   °C = 5/9 \left(°F - 32 \right)
+   ^{\circ}C = 5/9 \left(^{\circ}F - 32 \right)
    (\#eq:EqF)
 \end{equation}
 
