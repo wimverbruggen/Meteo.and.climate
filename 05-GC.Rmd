@@ -1,4 +1,314 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # (PART) Weather and climate systems/processes {-}
 
 # Global circulation, atmosphere-ocean interactions {#GC}
 \chaptermark{GC}
+
+---
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+---
+
+## General Circulation of the Atmosphere
+
+The average global winds are called the **general circulation of the atmosphere**. To find typical wind circulations, one needs to average wind speed and duration over a long period. 
+The reason we have global wind patterns is ultimately due to a **differentially heated, rotating Earth**. The differential heating of Earth continually causes an imbalance in air pressure and temperature around the world, which in turn causes a continuous general circulation of winds that attempt to restore balance.
+
+
+**Differential Heating** - Because the Earth is round, solar radiation is not equally spread at all latitudes. Near the Equator where sunlight shines directly on Earth, more solar radiation per square meter is received as compared to near the poles where sunlight shines at sharp angles to the surface. Toward Earth's poles, the same solar radiation is spread over a larger surface area such that each square meter of Earth's surface gets less radiation at the poles. As Earth rotates, the incoming solar radiation is zonally spread along latitude lines.
+In this way, incoming solar radiation depends on latitude. The sun shines more directly on tropical regions at lower latitudes than at higher latitudes all year-round. Solar radiation adds heat to the Earth-atmosphere-ocean system, and thus lower latitudes get heated more than higher latitudes. 
+While Earth is continually heated by the sun, it is also frequently losing energy by emitting outgoing longwave infrared (IR) radiation at all latitudes, and at all times, both on the light and the dark side of the globe. When averaged over the globe and over long time scales, incoming radiation exactly balances outgoing IR radiation. But, latitude by latitude, incoming and outgoing do not perfectly balance. The Earth receives more solar energy in the tropics, and while the cooling by outgoing IR radiation helps to offset this, there is still a net gain of radiative energy in the tropics. However, near Earth's poles, incoming solar radiation is less direct and too weak to offset the cooling by outgoing IR radiation, so there is net cooling at the poles. This causes warmer air at the Equator, and cold air at the poles and drives Earth's atmospheric general circulation.
+Earth's general circulation (in adittion to ocean current and latent heat fluxes which eachcontribute 1/3 of the latitudinal energy transport) attempts to redistribute heat around the globe and rebalance the energy imbalances inherent in an unevenly heated, rotating planet. However, the general circulation cannot instantly balance global temperature, especially when the uneven heating is continuous. Therefore, a meridional temperature gradient always remains.
+In an attempt to balance out Earth's incoming and outgoing energy, warm air is transported toward the poles, while cold air flows back toward the Equator. However, this seemingly simple flow is complicated by many factors, including Earth's rotation, the position of continents, interactions with the oceans and many others. To build an understanding of this process, we'll start with some simplified models and build complexity.
+
+**Video suggestion:** https://www.youtube.com/watch?v=7fd03fBRsuU
+
+### Single-Cell Model 
+
+With this model, we make the following assumptions:
+
+1. The Earth is entirely covered with water. Remove any land-sea interactions.
+2. There are no seasons, and the sun is always shining directly over the Equator. Removes seasonal wind shifts.
+3. No Coriolis force. While the Earth rotates to spread heat along latitudinal lines, this allows us only to be concerned with the pressure gradient force.
+
+With these assumptions in place, Earth's global circulation would like the figure below, with one giant vertically overturning cell in each hemisphere. The excess heating at the Equator is transported poleward by rising warm air, which is replaced by cold sinking polar air moving equatorward. This circulation is known as the **Hadley cell**. The Hadley cell is known as a thermally direct circulation because in it, warm air is rising and cold air is sinking.	
+The circulation can be thought of in two ways. In the first, hot air at the Equator rises because it is warm and **buoyant**. It reaches the tropopause, spreading laterally north and south at high elevations. To compensate for the rising air, surface air flows toward the Equator, resulting in convergence and further uplift. Continuity of this circulation results in a global circulation with rising air at the Equator and sinking air at the poles.
+A second way to view global circulation is that the excess heating of air at the Equator creates a large area of low pressure at the surface of the planet, while extra cooling at the poles creates high pressure at the surface. This global horizontal pressure gradient causes air to flow from high to low at the surface (pole to the Equator), where the air subsequently rises at the Equator and flows back to the poles and sinks.
+Both reasonings are plausible, its a matter of whether you focus on temperature or pressure. The temperature differences and the resulting pressure differences are intertwined and both important for the general circulation.
+
+```{r Fig511, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure511.png'))
+```
+
+While this single-cell model can explain some phenomenon and works in some ways, it is not the reality on Earth. Earth is a rotating planet, so we need to consider the Coriolis force in addition to the pressure gradient force. A different model is required.
+
+### Three-Cell Model
+
+If we allow for the effects of a rotating planet, the simple single-cell model above breaks down into multiple cells in each hemisphere as shown in the figure below. It may look more complex and unrelated to the single-cell model, but there are many similarities from above. There is still excess heating in equatorial regions and extra cooling in the polar areas. Instead of heat being redistributed by one massive Hadley cell from the Equator to the poles, there are now **three convective cells**. The first of these is still the same thermally direct Hadley cell from before, but now it extends only from the Equator to about 30° latitude. The poles still have an extensive high-pressure system, while the Equator has a broad belt of low pressure along with it.
+
+```{r Fig512, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure512.png'))
+```
+
+* **Hadley Cell**: The largest cells extend from the Equator to between 30 and 40 degrees (horse latitudes) north and south, and are named Hadley cells, after English meteorologist George Hadley. Within the Hadley cells, the trade winds blow towards the Equator, then ascend near the Equator as a broken line of thunderstorms, which forms the Inter-Tropical-Convergence Zone (ITCZ). From the tops of these storms, the air flows towards higher latitudes, where it sinks to produce high-pressure regions over the subtropical oceans and the world's hot deserts, such as the Sahara desert in North Africa.
+* **Ferrel Cell**: In the middle cells, which are known as the Ferrel cells, air converges at low altitudes to ascend along the boundaries between the cold polar air and the warm subtropical air that generally occurs between 60 and 70 degrees north and south. The circulation within the Ferrel cell is complicated by a return flow of air at high altitudes towards the tropics, where it joins sinking air from the Hadley cell. The Ferrel cell moves in the opposite direction to the two other cells (Hadley cell and Polar cell) and acts somewhat like a gear. In this cell, the surface wind would flow from a southerly direction in the northern hemisphere. However, the spin of the Earth induces an apparent motion to the right in the northern hemisphere and left in the southern hemisphere. This deflection is caused by the Coriolis effect and leads to the prevailing westerly.
+* **Polar Cell:** The smallest and weakest cells are the Polar cells, which extend from between 60 and 70 degrees north and south to the poles. The air in these cells sinks over the highest latitudes and flows out towards the lower latitudes at the surface.
+
+This three-cell model has quite good correspondence to observed wind circulations. 
+
+***Video suggestion:*** https://www.youtube.com/watch?v=xqM83_og1Fc
+
+### Average surface winds and pressure: The real world
+
+**Semipermanent Highs and Lows: January vs July**
+
+How does the real world's average surface sea level pressure field compare with the above picture? When we add in the continents, ice masses, oceans, mountains, and forest, we get an average that looks something like the below two figures. The following maps show the averaged mean sea-level pressure field for January and July.
+Looking at the two maps below, you may notice that there are some areas where low and high-pressure systems seem to persist throughout the year – these are known as **semipermanent highs and semipermanent lows**. These include the **Bermuda-Azores High**, the **Pacific High**, the **Icelandic Low**, and the **Aleutian Low**.
+The maps show that the ITCZ is moving north ans south depending on the season. This causes wet and dry seasons in the tropics. In January we find strong high pressure zones above the land in the Northern hemisphere (Siberia, Canada)n, while in July we find thermal low pressure zone above the Northern continents. You can see that the Icelandic low is stronger in January, while the high pressure zone of the Azores is stronger in July. 
+
+```{r Fig513a, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure513a.png'))
+```
+```{r Fig513b, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure513b.png'))
+```
+
+### Impact on precipitation patterns
+
+If Earth's surface were perfectly uniform, the long-term average rainfall would be distributed in distinct latitudinal bands. Still, the situation is complicated by the pattern of the global winds, the distribution of land and sea, and the presence of mountains. **Because rainfall results from the ascent and cooling of moist air, the areas of heavy rain indicate regions of rising air. In contrast, the deserts occur in areas where the air is warmed and dried during descent.**
+In the subtropics, the trade winds bring plentiful rain to the east coasts of the continents, but the west coasts tend to be dry. On the other hand, in high latitudes, the west coasts are generally wetter than the east coasts. Rain tends to be abundant on the windward slopes of mountain ranges but sparse on the lee sides.
+
+```{r Fig514, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure514.png'))
+```
+
+* **Equatorial belt:** the trade winds from both hemispheres converge and give rise to a general upward motion of air, which becomes intensified locally in tropical storms that produce very heavy rains in the Caribbean, the Indian and southwest Pacific oceans, and the China Sea and in thunderstorms that are especially frequent and active over the land areas. During the annual cycle, the **doldrums** move toward the summer hemisphere, so outside a central region near the Equator, which has abundant rain at all seasons, there is a zone that receives much rain in summer but a good deal less in winter.
+* The **dry areas of the subtropic** — such as the desert regions of North Africa, the Arabian Peninsula, South Africa, Australia, and central South America—are due to the presence of semipermanent subtropical anticyclones in which the air subsides and becomes warm and dry. These high-pressure belts tend to migrate with the seasons and cause summer dryness on the poleward side and winter dryness on the equatorward side of their mean positions. The easterly trade winds, having made a long passage over the warm oceans, bring plentiful rains to the east coasts of the subtropical landmasses. Still, the west coasts and the interiors of the continents, which are often sheltered by mountain ranges, are arid.
+* **Middle latitudes:** weather and rainfall are dominated by travelling depressions and fronts that yield a good deal of rain in all seasons and most places except the far interiors of the Asian and North American continents. Generally, rainfall is more abundant in summer, except on the western coasts of North America, Europe, and North Africa, where it is higher during the winter.
+* **Polar regions:** the low precipitation is caused partly by subsidence of air in the high-pressure belts and partly by the low temperatures. Snow or rain occur at times, but evaporation from the cold sea and land surfaces are slow, and the cold air has little capacity for moisture.
+
+---
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+---
+
+## Jet streams
+
+### Definition
+
+The upper-level wind flow is frequently concentrated into relatively narrow bands called **jet streams, or jets**. The jets, whose wind speeds are usually over 200 km/h but can be as high as 400 km/h, act to steer upper-level waves. Jet streams are of great importance to air travel because they affect the ground speed, the velocity relative to the ground, of aircraft. Since the strong upper-level flow is usually associated with strong vertical wind shear, jet streams in midlatitudes are accompanied by strong horizontal temperature gradients. Jet streams whose extents are relatively isolated are called jet streaks. Well-defined circulation patterns of rising and sinking air are usually found just upstream and downstream, respectively, from jet streaks. Rising motion is located to the left and right just downstream and upstream, respectively, and sinking motion is found to the right and left just downstream and upstream, respectively. Jets tend to be strongest near the tropopause where the horizontal temperature gradient reverses.
+
+```{r Fig521a, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure521a.png'))
+```
+
+Jet streams encircle the Earth in meandering paths, shifting position as well as the speed with the seasons. During the winter their positions are nearer the Equator and their speeds higher than during the summer. There are often two, sometimes three jet-stream systems in each hemisphere:
+
+* The jet stream situated near 30º latitude at about 13 km above the subtropical high is the **subtropical jet stream** .
+* To the north, the jet stream situated at a lower altitude of about 10 km, near the polar front, is known as the **polar front jet stream**.
+
+During summer a third system occurs over Southeast Asia, India, the Arabian Sea, and tropical Africa. This tropical jet stream affects the formation and duration of Indian and African summer monsoons.
+
+```{r Fig521b, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure521b.png'))
+```
+```{r Fig521c, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure521c.png'))
+```
+
+### The formation of Jet Streams
+
+#### Polar Front Jet
+
+The polar front jet stream is also called the polar front jet or midlatitude jet stream, a belt of powerful upper-level winds that sits atop the polar front. At the polar front there is a strong termeperature grandient causing a strong PGF (dense isobars). The winds are strongest in the tropopause, which is the upper boundary of the troposphere, and move in a generally westerly direction in midlatitudes. The vertical wind shear which extends below the core of this jet stream is associated with horizontal temperature gradients that extend to the surface. As a consequence, this jet manifests itself as a front that marks the division between colder air over a deep layer and warmer air over a deep layer. The polar front jet can be baroclinically unstable and break up into **Rossby waves** (see 5.2.3).
+
+```{r Fig522a, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure522a.png'))
+```
+
+#### The subtropical Jet (See the first figure on section 5.2.1)
+
+The subtropical jet stream is a belt of strong upper-level winds lying above regions of subtropical high pressure. Unlike the polar front jet stream, it travels in lower latitudes and at slightly higher elevations, owing to the increase in the height of the tropopause at lower latitudes. The associated horizontal temperature gradients of this jet stream do not extend to the surface, so a surface front is not evident. In the tropics, an easterly jet is sometimes found at upper levels, mostly when a landmass is located poleward of an ocean, so the temperature increases with latitude.
+
+#### Jet Streams and Momentum
+
+```{r Fig522b, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure522b.png'))
+```
+
+angular momentum = $mvr$
+   
+***Video suggestion:*** https://www.youtube.com/watch?v=Lg91eowtfbw&feature=emb_title
+
+### Rossby Waves
+
+**Rossby wave** is a large horizontal atmospheric ondulation that is associated with the polar front jet stream and separates cold polar air from warm tropical air. 
+Rossby waves are formed when polar air moves toward the Equator while tropical air is moving poleward. Because of the temperature difference between the Equator and the poles due to differences in the amounts of solar radiation received, heat tends to flow from low to high latitudes; this is accomplished, in part, by these air movements. Rossby waves are a dominant component of the Ferrel circulation. The tropical air carries heat poleward, and the polar air absorbs heat as it moves toward the Equator. The existence of these waves explains the low-pressure cells (cyclones) and high-pressure cells (anticyclones) that are important in producing the weather of the middle and higher latitudes.
+
+***Video suggestion:*** https://oceanservice.noaa.gov/facts/rossby-wave.html
+
+### Jet Streams & Polar Vortex
+
+```{r Fig524a, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure524a.png'))
+```
+
+**Polar vortex** is the name given to the strong currents of wind formed by low pressure that occurs in the Arctic and Antarctic regions. The name originates from the fact that these winds circulate and create a vortex near the North and South Poles of the planet. 
+The polar vortex should not be confused with a type of storm. It is cold air current that occurs in an upper level of the atmosphere known as the stratosphere. The polar vortex contains some of the coldest air on Earth. The air is often contained by a strong jet of west-to-east moving winds that act as a wall, holding the cold air. These winds move at more than 161 km/h, which help lock the stand into place. The vortex in the Northern Hemisphere is believed to have two centers—one in northern Canada near Baffin Island and another in northeastern Siberia. The Southern Hemisphere's polar vortex is usually centered around the South Pole.
+Occasionally, changes in air pressure and wind help to diminish the "wall" of air containing the polar vortex, causing wobbles within the vortex. This unleashes cold air from the poles, allowing it to spread to other regions. This results in temperatures plummeting below -18°C in major cities. In the United States, the weakened vortex can cause bitterly cold temperatures to reach as far south as Florida. The Antarctic's polar vortex is stronger than its northern counterpart and not as susceptible to these wobbles.
+
+### Atmospheric River
+
+A long, narrow, and transient corridor of strong horizontal water vapour transport that is typically associated with a low-level jet stream ahead of the cold front of an extratropical cyclone. The water vapour in atmospheric rivers is supplied by tropical and/or extratropical moisture sources. 
+Atmospheric rivers frequently lead to heavy precipitation where they are forced upward—for example, by mountains or by an ascent in the warm conveyor belt. Horizontal water vapour transport in the midlatitudes occurs primarily in atmospheric rivers and is focused in the lower troposphere. Atmospheric rivers are the largest "rivers" of freshwater on Earth, transporting on average more than double the flow of the Amazon River.
+
+***Video suggestion:*** https://www.noaa.gov/stories/what-are-atmospheric-rivers
+
+---
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+---
+
+## Atmosphere-Ocean Interactions
+
+These are important casues of inter annual weather/climate variations and form the basis of teleconnections. 
+
+### Global wind patterns and surface ocean currents
+
+Annual average global wind patterns and surface high-pressure areas over the oceans.
+
+```{r Fig531a, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure531a.png'))
+```
+
+Average position and extent of the major surface ocean currents. They rotate because of the Coriolis effect. Their speed is typically a few km per day (versus winds which blow km’s per hour). For europe the gulf streaam is very important because it causes the very mild tempertatures in Europe (compared to simiilar latitudes in the US and Canada). Ocean currents have been and are still very important for ship traffic. Oceanic fronts are the sharp boundaries between warm and cold water masses. 
+
+```{r Fig531b, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure531b.png'))
+```
+
+### Upwelling & Ekman Spiral
+
+The wind blows across the ocean and moves its waters as a result of its frictional drag on the surface. If Earth did not rotate, the frictional coupling between moving air and the ocean surface would push a thin layer of water in the same direction as the wind. This surface layer, in turn, would drag the layer beneath it, putting it into motion. This interaction would propagate downward through successive ocean layers, like cards in a deck, each moving forward at a slower speed than the layer above. However, because Earth rotates, the shallow layer of surface water set in motion by the wind is deflected to the right of the wind direction in the Northern Hemisphere and to the left of the wind direction in the Southern Hemisphere. This deflection is known as the Coriolis effect. Except at the Equator, where the Coriolis effect is zero, each layer of water put into motion by the layer above shifts direction because of Earth's rotation.
+
+```{r Fig532a, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure532a.png'))
+```
+```{r Fig532b, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure532b.png'))
+```
+
+Using vectors to plot the direction and speed of water layers at successive depths, we can show a simplified three-dimensional current pattern caused by a steady horizontal wind (figure above). This model is known as the **Ekman spiral**. The Ekman spiral indicates that each moving layer is deflected to the right of the overlying layer's movement; hence, the direction of water movement changes with increasing depth. In an ideal case, a steady wind blowing across an ocean of unlimited depth and extent causes surface waters to move at an angle of 45 degrees to the right of the wind in the Northern Hemisphere (45 degrees to the left in the Southern Hemisphere). Each successive layer moves more toward the right and at a slower speed. At a depth of about 100 to 150 m, the Ekman spiral has gone through less than half a turn. Yet water moves so slowly (about 4% of the surface current) in a direction opposite that of the wind that this depth is considered to be the lower limit of the wind's influence on ocean movement.
+In the Northern Hemisphere, the Ekman spiral predicts net water movement through a depth of about 100 to 150 m at 90 degrees to the wind direction. That is, if one adds up all the vectors in, the resulting flow is at 90 degrees to the right of the wind direction. In the Southern Hemisphere, the net water movement is 90 degrees to the left of the wind direction. This net transport of water due to coupling between wind and surface waters is known as **Ekman transport**.
+In some coastal areas of the ocean (and large lakes such as the North American Great Lakes), the combination of persistent winds, Earth's rotation (the Coriolis effect), and restrictions on lateral movements of water caused by shorelines and shallow bottoms induces upward and downward water movements. As explained above, the Coriolis effect plus the frictional coupling of wind and water (Ekman transport) cause net movement of surface water at about 90 degrees to the right of the wind direction in the Northern Hemisphere and the left of the wind direction in the Southern Hemisphere. **Coastal upwelling** occurs where Ekman transport moves surface waters away from the coast; surface waters are replaced by water that wells up from below.
+
+**The example at California Coast (Summer Upwelling)**
+
+```{r Fig532c, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure532c.png'))
+```
+Upwelling is most common along the west coast of continents (eastern sides of ocean basins). In the Northern Hemisphere, upwelling occurs along west coasts (e.g., coasts of California, Northwest Africa) when winds blow from the north (causing Ekman transport of surface water away from the shore). Winds blowing from the south cause upwelling along continents' eastern coasts in the Northern Hemisphere, although it is not as noticeable because of the western boundary currents. Upwelling also occurs along the west coasts in the Southern Hemisphere (e.g., coasts of Chile, Peru, and southwest Africa) when the wind direction is from the south because the net transport of surface water is westward away from the shoreline. Winds blowing from the north cause upwelling along the continents' eastern coasts in the Southern Hemisphere. The upwelling is the reason why we find the coldest ocean temperatures just North of San Fransisco in the figure above.
+
+### El Niño Southern Oscillation (ENSO)
+
+El Niño and La Niña are opposite phases of what is known as the El Niño-Southern Oscillation (ENSO) cycle. The ENSO cycle is a scientific term that describes the fluctuations in temperature between the ocean and atmosphere in the east-central Equatorial Pacific. 
+La Niña is sometimes referred to as the cold phase of ENSO and El Niño as the warm phase of ENSO. These deviations from average surface temperatures can have large-scale impacts not only on ocean processes but also on global weather and climate. ENSO is an example of a **teleconnection**, a term used to indicate that seemingly unrelated weather patterns over long distance are in fact connected to eachother.
+El Niño and La Niña episodes typically last nine to 12 months, but some prolonged events may last for years. While their frequency can be quite irregular, El Niño and La Niña events occur on average every two to seven years. Typically, El Niño occurs more frequently than La Niña.
+
+#### La Ninã vs El Niño
+```{r Fig533a, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure533a.png'))
+```
+'La Niña' or "the girl" is the term adopted for the opposite side of the fluctuation, which sees episodes of colder than average sea surface temperature in the equatorial Pacific. The conditions for declaring 'La Niña' differ between different agencies, but during an event, sea temperatures can often fall 3-5 °C below average. Colder, drier than average weather is experienced in the tropical eastern Pacific.
+There are also neutral phases of the cycle when conditions are closer to the long-term average (within +/- 0.5 °C). These may be within a period of warming or cooling in the cycle. Approximately half of all years are described as neutral.
+The la Niña situation can be considered as the “normal” situation, with a convection cell showing a L pressure center in the western pacific (Philipines) and a H pressure center near the coast of South America. This convection cell is called the Walker circulation. In this situation there if very high rainfall in the Philippines. 
+
+```{r Fig533b, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure533b.png'))
+```
+
+An El Niño is declared when sea temperatures in the tropical eastern Pacific rise 0.5 °C above the long-term average. El Niño is felt strongly in the tropical eastern Pacific with warmer than average weather. The effects of El Niño often peak during December; its name "the boy" is thought to have originated as "El Niño de Navidad" centuries ago when Peruvian fishermen named the weather phenomenon after the newborn Christ.
+
+These episodes alternate in an irregular inter-annual cycle called the ENSO cycle. 'ENSO' stands for 'El Niño Southern Oscillation', where 'Southern Oscillation' is the term for atmospheric pressure changes between the east and west tropical Pacific that accompany both El Niño and La Niña episodes in the ocean.
+The name 'ENSO' is a reminder that close interaction between the atmosphere and ocean is an essential part of the process. While the global climate system contains many processes, ENSO is by far the dominant feature of climate variability on inter-annual timescales.
+The El Niño situation occures when the Walker circualtion is reversed and there is simulatneously a strong ocean counter current towards the cost of Peru (Kelvin wave). 
+
+```{r Fig533c, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure533c.png'))
+```
+
+***Video suggestion:*** https://www.youtube.com/watch?v=WPA-KpldDVc
+
+#### ENSO Events and Frequency: Sea surface temperature (SST) and the Oceanic Niño Index (ONI)
+
+El Niño (La Niña) is a phenomenon in the equatorial Pacific Ocean characterized by a five consecutive 3-month running mean of **sea surface temperature (SST) anomalies in the Niño 3.4 region** that is above the threshold of +0.5°C (-0.5°C). This standard of measure is known as the **Oceanic Niño Index (ONI)**.
+
+```{r Fig533d, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure533d.png'))
+```
+
+Historically, scientists have classified the intensity of El Niño based on SST anomalies exceeding a pre-selected threshold in a specific region of the equatorial Pacific. The most commonly used region is the Niño 3.4 region, and the most commonly used threshold is a positive SST departure from normal greater than or equal to +0.5°C. Since this region encompasses the western half of the equatorial cold tongue region, it provides a good measure of important changes in SST and SST gradients that result in changes in the pattern of deep tropical convection and atmospheric circulation. The criteria that is often used to classify El Niño episodes is that five consecutive 3-month running mean SST anomalies exceed the threshold.
+
+Studies have shown that a necessary condition for the development and persistence of deep convection (enhanced cloudiness and precipitation) in the Tropics is that the local SST be 28°C or greater. Once the pattern of deep convection has been altered due to anomalous SSTs, the tropical and subtropical atmospheric circulation adjusts to the new pattern of tropical heating, resulting in anomalous patterns of precipitation and temperature that extend well beyond the region of the equatorial Pacific. An SST anomaly of +0.5°C in the Niño 3.4 region is sufficient to reach this threshold from late March to mid-June. During the remainder of the year a larger SST anomaly, up to +1.5°C in November-December-January, is required to reach the threshold to support persistent deep convection in that region.
+
+This shows that each El Niño event is different and can differ in strength.
+
+```{r Fig533e, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure533e.png'))
+```
+
+```{r Fig533f, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure533f.png'))
+```
+
+#### Effects of strong El Niño
+
+ENSO can have various effects over the globe. With impacts on various aspects: agriculture, floodings, tree growth, etc… 
+
+```{r Fig533g, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure533g.png'))
+```
+
+### Pacific Decadal Oscillation (PDO)
+
+```{r Fig534a, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure534a.png'))
+```
+
+The Pacific Decadal Oscillation (PDO) is often described as a long-lived El Niño-like pattern of Pacific climate variability (20-30 year pattern). As seen with the better-known El Niño/Southern Oscillation (ENSO), extremes in the PDO pattern are marked by widespread variations in the Pacific Basin and the North American climate. In parallel with the ENSO phenomenon, the extreme phases of the PDO have been classified as being either warm or cold, as defined by ocean temperature anomalies in the northeast and the tropical Pacific Ocean. When SSTs are anomalously cool in the interior North Pacific and warm along the Pacific Coast, and when sea level pressures are below average over the North Pacific, the PDO has a **positive** value. When the climate anomaly patterns are reversed, with warm SST anomalies in the interior, and cold SST anomalies along the North American coast or above-average sea level pressures over the North Pacific, the PDO has a **negative** value.
+The positive phase induces warm and dry winters in Western Canada and US, while the negative phase causes cold and wet winters in these areas. 
+
+### North Atlantic Oscilation (NAO)
+
+The **North Atlantic Oscillation (NAO)** index is based on the surface sea-level pressure difference between the Subtropical (Azores) High and the Subpolar Low.
+
+* **Positive phase:** reflects below-normal pressures across the high latitudes of the North Atlantic and above-normal pressures over the central North Atlantic, the eastern United States and western Europe. Strong positive phases of the NAO tend to be associated with above-normal temperatures in the east of United States and across northern Europe and below-normal temperatures in Greenland and frequently across southern Europe and the Middle East. They are also associated with above-normal precipitation over northern Europe and Scandinavia and below-normal precipitation over southern and central Europe.
+* **Negative phase:** reflects an opposite pattern of pressure anomalies over these regions. Opposite patterns of temperature and precipitation anomalies are typically observed during strong negative phases of the NAO.
+Both phases of the NAO are associated with basin-wide changes in the intensity and location of the North Atlantic jet stream and storm track and large-scale modulations of the normal patterns of zonal and meridional heat and moisture transport, which in turn results in changes in temperature and precipitation patterns often extending from eastern North America to western and central Europe.
+
+During particularly prolonged periods dominated by one particular phase of the NAO, abnormal temperature patterns are also often seen extending well into central Russia and north-central Siberia. The NAO exhibits considerable interseasonal and interannual variability, and prolonged periods (several months) of both positive and negative phases of the pattern are common.
+
+```{r Fig535a, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure535a.png'))
+```
+
+### Arctic Oscillation
+
+The **Arctic Oscillation (AO)** is a large scale mode of climate variability, also referred to as the Northern Hemisphere annular mode. The AO is a climate pattern characterized by winds circulating counterclockwise around the Arctic at around 55°N latitude. When the AO is in its **positive phase**, a ring of strong winds circulating around the North Pole acts to confine colder air across polar regions. This belt of winds becomes weaker and more distorted in the **negative phase of the AO**, which allows easier southward penetration of colder, arctic airmasses and increased storminess into the mid-latitudes.
+AO index is obtained by projecting the AO loading pattern to the daily anomaly 1000 millibar height field over 20°N-90°N latitude. The AO loading pattern has been chosen as the first mode of EOF analysis using monthly mean 1000 millibar height anomaly data from 1979 to 2000 over 20°N-90°N.
+The AO is strongly linked with the polar vortex described above. 
+
+```{r Fig536, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure536.png'))
+```
+
+
+
+
