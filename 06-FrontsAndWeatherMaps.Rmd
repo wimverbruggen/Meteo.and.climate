@@ -1,0 +1,336 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Fronts and Weather Maps {#WFM}
+\chaptermark{WFM}
+
+---
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+---
+
+## Air masses
+
+### Definition and Classification
+
+* **Definition:** a large body of air having nearly uniform conditions of temperature and humidity at any given level of altitude. Such a mass has distinct boundaries and may extend hundreds or thousands of kilometres horizontally and sometimes as high as the top of the troposphere (about 10–18 km above the Earth's surface). An air mass forms whenever the atmosphere remains in contact with a large, relatively uniform land or sea surface for a time sufficiently long to acquire the temperature and moisture properties of that surface. 
+* **Source regions:** regions where air masses originate. The Earth's major air masses form in polar or subtropical latitudes. The middle latitudes constitute a zone of modification, interaction and mixing of the polar and tropical air masses.
+* **Classification:** according to their temperature and humidity. 
+
+There are two broad overarching divisions of air masses based upon the moisture content. **Continental air masses**, designated by the lowercase letter 'c', originate over continents are therefore dry air masses. **Maritime air masses**, designated by the letter 'm', develop over the oceans and are consequently moist air masses.
+
+Each of the two divisions is then subdivided based upon the temperature content of the surface over which they originate.
+
+* **Arctic air masses**, designated by the letter 'A', are very cold as they originate over the Arctic or Antarctic regions.
+* **Polar air masses**, designated by the letter 'P', are not as cold as Arctic air masses as they originate over the higher latitudes of both land and sea.
+* **Tropical air masses**, designated by the letter 'T', are warm/hot as they originate over the lower latitudes of both land and sea.
+
+Putting both designations together, we have, for example, a "continental arctic" air mass designated by 'cA', which source is over the poles and therefore very cold and dry. Continental polar (cP) is not as cold as the Arctic air mass but is also very dry. Maritime polar (mP) is also cold but moist due to its origination over the oceans. The desert region air masses (hot and dry) are designated by 'cT' for 'continental tropical'.
+
+
+```{r Fig611, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure611.png'))
+```
+
+As these air masses move around the Earth, they can begin to acquire additional attributes. For example, in winter an arctic air mass (very cold and dry Air) can move over the ocean, picking up some warmth and moisture from the warmer ocean and becoming a maritime polar air mass (mP) - one that is still reasonably cold but contains moisture.
+If that same polar air mass moves south from Canada into the southern U.S. it will pick up some of the warmth of the ground, but due to lack of moisture, it remains very dry. This is called a continental polar air mass (cP).
+Sometimes a third letter is added to the classification: a 'k' or a 'w' if the air mass is colder or warmer compared to the surface over which it is flowing. 
+
+### Types of Air Masses
+
+#### North America
+
+```{r Fig612a, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure612a.png'))
+```
+
+* **Continental Polar (cP) Air:** Continental polar air is cold, dry, and stable. It forms over the snow-covered interiors of Canada and Alaska. The most common example of continental polar Air entering the U.S. comes in winter, when the jet stream dips southward, carrying cold, dry cP air, sometimes as far south as Florida. Although cP air is cold, it also influences summer weather in the U.S. Summer cP air (which is still cool, but not as cold and dry as it is in winter) often brings relief from heatwaves.
+* **Continental Arctic (cA) Air:** Like continental polar air, continental arctic air is also cold and dry, but because it forms farther north over the Arctic basin and Greenland ice cap, its temperatures are generally colder. It is also generally only a wintertime air mass.
+* **Maritime Polar (mP) Air:** Maritime polar air masses are cold, moist, and unstable. Those affecting the U.S. originate over the North Pacific Ocean and the Northwestern Atlantic Ocean. Since ocean surface temperatures are typically higher than land, mP air can be thought of as milder than cP or cA air. In winter, mP air is associated with nor'easters and generally gloomy days. In summer, it can lead to low stratus, fog, and periods of cold, comfortable temperatures.
+* **Maritime Tropical (mT) Air:** Maritime tropical air masses are warm and very humid. Those affecting the U.S. originate over the Gulf of Mexico, the Caribbean Sea, the western Atlantic, and the subtropical Pacific. Maritime tropical air is unstable, which is why it's commonly associated with cumulus development and thunderstorm and shower activity. In winter, it can lead to advection fog (which develops as the warm, humid air is chilled and condenses as it moves over the cold land surface).
+* **Continental Tropical (cT) Air:** Continental tropical air masses are hot and dry. Their air is carried from Mexico and the southwestern U.S., and only impacts U.S. weather during the summertime. While cT air is unstable, it tends to remain cloudless due to its extremely low humidity content. If a cT air mass lingers over a region for any time, a severe drought can occur.
+
+#### Europe
+
+The Figure below puts the UK central, but the same air masses are of influence in Belgium or Western Europe in general. There are three main differences with North America: (1) in Europe arctic maritime air (mA) plays a role (which is not the case in North America, (2) continental arctic air masses are less important, and (3) East-West oriented mountain barriers (Alps/Pyrenees) make incoming tropical continental air (cT) rather exceptional in Belgium and neighbouring countries. 
+The weather that air masses bring to Belgium is depending on the season. A good example is that the (exceptional) continental polar air we get in Belgium brings dry and cold weather in winter, while it brings dry and hot weather summer.
+
+```{r Fig612b, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure612b.png'))
+```
+
+* **Tropical continental:** This air mass originates over North Africa and the Sahara (a warm source region). It is most common during the summer months June, July and August, although it can occur at other times of the year. Our highest temperatures usually happen under the influence of tropical continental air (over 30 °C by day and around 15 to 20 °C at night). Visibility is typically moderate or low due to the air picking up pollutants during its passage over Europe and from sand particles blown into the air from Saharan dust storms. Occasionally, the Saharan dust is washed out in showers producing coloured rain and leaving cars covered in a thin layer of orange dust.
+* **Tropical maritime:** The source region for this air mass is warm waters of the Atlantic Ocean between the Azores and Bermuda. The predominant wind direction across the British Isles, in a tropical maritime air mass, is south-westerly. Tropical maritime air is warm and moist in its lowest layers and, although unstable over its source region, during its passage over cooler waters becomes stable, and the air becomes saturated. Consequently, when a tropical maritime air mass reaches the British Isles (or Belgium), it brings with it low cloud and drizzle, perhaps also fog around windward coasts and across hills. To the lee of high ground though, the cloud my break up and here the weather, particularly in the summer months, can be fine and sunny. This is a mild air stream and during the winter month, in particular, can raise the air temperature several degrees above the average.
+* **Polar continental:** This air mass has its origins over the snowfields of Eastern Europe and Russia and is only considered a winter (November to April) phenomena. During the summer with the landmass considerably warmer, this air mass would be classed as a tropical continental. The weather characteristics of this air mass depend on the length of the sea track during its passage from Europe to the British Isles. This Air is inherently very cold and dry, and if it reaches southern Britain with a short sea track over the English Channel, the weather is characterised by clear skies and severe frosts. With a longer sea track over the North Sea, the Air becomes unstable, and moisture is added, giving rise to showers of rain or snow, especially near the east coast of Britain. The lowest temperatures across the British Isles usually occur in this air mass, lower than -10 °C at night, and sometimes remaining below freezing all day.
+* **Polar maritime:** This air mass has its origins over northern Canada and Greenland and reaches the British Isles on a north-westerly air stream. Polar maritime is the most common air mass to affect the British Isles. This air mass starts very cold and dry but during its long passage over the relatively warm waters of the North Atlantic its temperature rises rapidly and it becomes unstable to a great depth. This air mass is characterised by frequent showers at any time of the year. In the winter months when instability (convection) is most vigorous over the sea, hail and thunder are expected across much of the western and northern side of the British Isles. However, eastern Britain may see fewer showers as here the surface heating is reduced. During the summer, the reverse is true, land temperatures are higher than sea temperatures and the heaviest rains occur over eastern England.
+* **Arctic maritime:** An arctic maritime air mass has similar characteristics to a polar maritime air mass, but because of the shorter sea track the Air is colder and less moist. Arctic Air is uncommon during the summer, but when it does occur, it may bring heavy showers or thunderstorms and unseasonably low temperatures. Between October and May, the Air is cold enough to produce hail showers or snow, and these are most frequent over Scotland and along the coasts exposed to northerly winds. An arctic maritime air mass has its origins over the North Pole and the Arctic Ocean. Polar low-pressure systems forming in this air mass can sometimes lead to widespread and heavy snowfall, but otherwise inland areas remain free of cloud in the winter months. In northern Scotland, arctic maritime is usually the coldest air mass, but over the rest of Britain, this air mass is not as cold as polar continental.
+* **Returning polar maritime:** Returning polar maritime is another version of polar maritime, but this time with a longer sea track which takes the Air first southwards over the North-Atlantic, the north-eastwards across the British isles. During its passage south, the Air becomes unstable and moist, but on moving north-east, it passes over colder water making it stable in its lowest layers. Although the weather across the British Isles in this air mass is mostly dry, there can be extensive cloud cover.
+
+***Video Suggestion:*** https://www.youtube.com/watch?v=kvk-hBFnBTI
+
+### Atmospheric river
+
+A long, narrow, and transient corridor of strong horizontal water vapour transport that is typically associated with a low-level jet stream ahead of the cold front of an extratropical cyclone. The water vapour in atmospheric rivers is supplied by tropical and/or extratropical moisture sources. 
+Atmospheric rivers frequently lead to heavy precipitation where they are forced upward—for example, by mountains or by an ascent in the warm conveyor belt. Horizontal water vapour transport in the midlatitudes occurs primarily in atmospheric rivers and is focused in the lower troposphere. Atmospheric rivers are the largest "rivers" of freshwater on Earth, transporting on average more than double the flow of the Amazon River.
+
+```{r Fig613, fig.cap='Figure caption',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure613.png'))
+```
+***Video suggestion:*** https://www.noaa.gov/stories/what-are-atmospheric-rivers
+
+---
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+---
+
+## Fronts
+
+### Definition
+
+A ***weather front*** is a boundary between two air masses, which often have contrasting properties.
+Across a front, there can be large temperature variations, as warm air comes into contact with cooler air. The temperature difference can indicate the 'strength' of a front. If very cold air comes into contact with warm tropical air, for example, the front can be 'strong' or 'intense'. However, if there is little difference in temperature between the two air masses, the front may be 'weak.'
+
+```{r Fig621, fig.cap='Symbols (half circles, triangles) indicate  the direction of movement of the fronts. Green area is the area of precipitation. Each symbol with wind and temperature info is a weather station. ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure621.png'))
+```
+
+***Video suggestion:*** https://www.youtube.com/watch?v=dwIQds-4I7I&feature=emb_title
+
+### Stationary Fronts
+
+A stationary front forms when a cold front or warm front stops moving. This happens when two masses of air are pushing against each other, but neither is powerful enough to move the other. Winds blowing parallel to the front instead of perpendicular can help it stay in place.
+A stationary front may stay for days. If the wind direction changes, the front will start moving again, becoming either a cold or warm front. Or the front may break apart. Because a stationary front marks the boundary between two air masses, there are often differences in air temperature and wind on opposite sides of it. The weather is often cloudy along a stationary front, and rain or snow often falls, especially if the front is in an area of low atmospheric pressure.
+
+```{r Fig622, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure622.png'))
+```
+
+### Cold Fronts
+
+A cold front forms when a cold air mass pushes into a warmer air mass. Cold fronts can produce dramatic changes in the weather. They move fast (~40 km per hour), up to twice as fast as a warm front. As a cold front moves into an area, the heavier (denser) cold air pushes under, the lighter (less dense) warm air, causing it to rise into the troposphere. Lifted warm air ahead of the front produces cumulus or cumulonimbus clouds and thunderstorms.
+As the cold front passes, winds become gusty. There is a sudden drop in temperature, and also heavy rain, sometimes with hail, thunder, and lightning. Atmospheric pressure changes from falling to rising at the front. After a cold front moves through your area, you may notice that the temperature is cooler, the rain has stopped, and the cumulus clouds are replaced by stratus and stratocumulus clouds or clear skies.
+
+```{r Fig623, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure623.png'))
+```
+
+```{r Fig623b, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure623b.png'))
+```
+
+The average slope of a cold-frontal surface is about 1 in 50. A cold front moves, on average, at about the speed of the geostrophic wind component normal to the front and measured at it. The passage of a cold front is normally marked at the Earth's surface by a rise of pressure, a fall of temperature and dew-point, and a veer of wind (in the northern hemisphere). Rain occurs in association with most cold fronts and may extend some 100 to 200 km ahead of or behind the front. Some cold fronts give only a shower at the front, while still others give no precipitation. Thunder, and occasionally a line squall, may occur at a cold front.
+
+```{r Fig623c, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure623c.png'))
+```
+
+**Frontolysis vs. Frontogenesis:**
+Frontolysis is the weakening of a front (temperature and density difference between two air masses become smaller). Frontogenesis is the strengthening of a front, for example when a cold front moves the continent to the ocean (Figure below), causing a larger difference with the warm moist air above the ocean, creating more precipitation in a squall line. 
+
+```{r Fig623d, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure623d.png'))
+```
+
+
+### Warm Fronts
+
+A warm front forms when a warm air mass pushes into a colder air mass. Warm fronts move more slowly (~20 km per hour) than cold fronts because it is more difficult for the warm air to push the cold, dense air across the Earth's surface. Warm fronts often form on the east side of low-pressure systems where warmer air from the south is pushed north.
+You will often see high clouds like cirrus, cirrostratus, and middle clouds like altostratus ahead of a warm front. These clouds form in the warm air that is high above the cold air. As the front passes over an area, the clouds become lower, and rain is likely. There can be thunderstorms around the warm front if the air is unstable, but usually they come with moderate rain.
+
+```{r Fig624a, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure624a.png'))
+```
+
+```{r Fig624b, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure624b.png'))
+```
+
+The average slope of a warm-frontal surface is about 1 in 150. A warm front moves, on average, at speed some two-thirds of the component of the geostrophic wind component normal to the front and measured at it. 
+As a warm front approaches, temperature and dew-point within the cold air gradually rise, and pressure falls at an increasing rate. Precipitation usually occurs within a broad belt some 400 km in advance of the front. Passage of the front is usually marked by a steadying of the barometer, a discontinuous rise of temperature and dew-point, a veer of wind (in the northern hemisphere), and a cessation or near cessation of precipitation. When a temperature profile is observed (weather balloon), a temperature inversion can be observed when passing the front surface (frontal inversion).
+
+```{r Fig624c, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure624c.png'))
+```
+
+**Occluded fronts**
+
+Sometimes a cold front follows right behind a warm front (see polar front theory 6.3.1). A warm air mass pushes into a colder air mass (the warm front), and then another cold air mass pushes into the warm air mass (the cold front). Because cold fronts move faster, the cold front is likely to overtake the warm front. This is known as an occluded front. At an occluded front, the cold air mass from the cold front meets the cool air that was ahead of the warm front. The warm air rises as these air masses come together. Occluded fronts usually form around areas of low atmospheric pressure. There is often precipitation along an occluded front from cumulonimbus or nimbostratus clouds. Wind changes direction as the front passes and the temperature either warms or cools. After the front passes, the sky is usually clearer, and the air is drier.
+
+There are two types of occluded fronts:
+
+* **Cold Occlusions:** Here, the cold air mass behind the cold front is colder than the cold air mass before the warm front. The occlusion behaves like a cold front because the very cold air is pushing away cool air. On the map, the occlusion mostly follows the shape of the cold front.
+* **Warm Occlusions:** Here, the occlusion behaves like a warm front because the cool air mass of the cold front is warmer than the cold air mass associated with the warm front. In this case, first, the triple point with the heaviest rain is passing, and after that, the actual front is passing the surface. On the map, the occlusion mostly follows the shape of the warm front.
+
+**Classic Model of a developing cold-type/ warm-type occluded front**
+
+```{r Fig624d, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure624d.png'))
+```
+```{r Fig624e, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure624e.png'))
+```
+
+### Upper-air fronts
+
+* This is a specific situation where the tropopause folds over the jetstream. We show this as an example that fronts do not only exist near the surface. 
+* A zone of strong quasi horizontal temperature gradient and high static stability in the middle and upper troposphere which does not necessarily extend to the surface.
+* Not called "cold" or "warm" since the isentropes (=surface of constant potential temperature) are typically aligned along with the flow.
+* Develop concurrently with upper-level jets, troughs, and tropopause folds.
+
+```{r Fig625, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure625.png'))
+```
+
+---
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
+---
+
+## Middle-Latitude Cyclones
+
+The extratropical cyclone also called wave cyclone, or midlatitude cyclone is a type of storm system formed in middle or high latitudes, in regions of large horizontal temperature variations called frontal zones. Extratropical cyclones present a contrast to the more violent cyclones or hurricanes of the tropics, which form in regions of relatively uniform temperatures.
+
+### Polar Front Theory
+
+**Stages of a developing wave cyclone**
+
+The polar front theory, also known as the Norwegian model, states that cyclones have a reasonably predictable, six-stage life cycle. It all begins along the polar front at 60-65 degrees north, where two very different air masses with different densities meet. Clockwise rotation along with the polar high air mass (cold, dense air) and the subtropical high air mass (warm, less dense air) causes air to flow parallel to each other along the polar front but in opposite directions. Where these two different air masses meet is called a **stationary front**, and cyclogenesis (formating a mid-latitude cyclone) has begun (**birth**).
+
+```{r Fig631, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure631.png'))
+```
+
+**The Frontal Wave**
+
+The wind shear, caused by air that flows parallel but in the opposite direction, creates a wave rotating counterclockwise along the polar front where warm subtropical air begins to migrate northward, and cold polar air migrates southward. In the center of this rotating wave, a low-pressure system develops, rotating counterclockwise. The advancing boundary of the cold polar air is a cold front, and the boundary of the advancing warm sub-tropical air is a warm front.
+
+**Open wave**
+
+By stage three, the midlatitude cyclone has a defined warm front and cold front. The up-lifting of air begins to occur at this stage as the warmer, lighter, and moister air mass is forced to rise over the colder, denser, and drier air mass. A massive amount of latent heat is being released as water vapour condenses to form clouds. This release of heat strengthens the low pressure (pressure drops more), and the atmosphere becomes more unstable. In front of an advancing warm front, the air would be cold, and stratus-type clouds would begin to develop. As the weather front approaches, the stratus clouds would lower until nimbostratus clouds were overhead.
+Typically with warm fronts, the precipitation is light but may last a few days. Once the front passed, it would feel warmer. In front of an advancing cold front, it would be warm at first with warm, southern winds blowing. Cumulus-type clouds would also begin to develop and lower as the cold front approached. Once the cold front is overhead, expect powerful cumulonimbus thunderstorms with the possibility of lightning and thunder, hail, strong winds, and intense precipitation in the form of rain or snow. Once the cold front has passed by, expect colder temperatures and winds from the north or northwest.
+A large warm sector is becoming narrower when the storm develops. The precipitation zone becomes larger (green in the Figure). 
+
+**Initial occlusion (mature storm)**
+
+As the days move on, the cold front might begin to "catch up" to the warm front and an occluded front forms. During this stage, the cold front forces the rest of the warm air from the warm front into the upper atmosphere. Now, before the front passes, the air is cool, and afterwards, the air is cold. This is when the storm is most intense powerful, as the pressure drops further, and the winds are most intense (indicated by the isobars). 
+
+**Advanced occlusion**
+
+However, this also marks the end of midlatitude cyclone's life cycle. Once the warm air is forced upward, there is less latent heat and less energy released into the storm. Remember that weather fronts mark the boundary between two high-pressure air masses. So once the midlatitude cyclone moves off, high pressure tends to follow (**Cut-off cyclone**). The results are clear skies, little wind, and pressure rising.
+
+### Upper-Level Waves (Rossby Waves)
+
+**Longwaves**
+
+The hemispheric weather patterns are governed by mid-latitude (23.5°N/S to 66.5°N/S) westerly winds which move in large wavy patterns. Known as planetary waves, these longwaves are also called Rossby waves, named after Carl Rossby who discovered them in the 1930s.
+
+```{r Fig632a, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure632a.png'))
+```
+
+Rossby waves form primarily because of the Earth's geography, which does two things. First, the Earth's heating from the sun is uneven due to the different shapes and sizes of the landmass (called differential heating of the Earth's surface). Second, the air can't travel through a mountain so it must rise up and over or go around. In both cases, the disruption of the airflow creates imbalances in temperature distribution both vertically and horizontally. The wind responds by seeking a return to a "balanced" atmosphere and changes speed and/or direction. However, as long as the sun keeps shinning, those imbalances will continue to develop. Thus, the wind will always be changing directions and develop into wave-like patterns.
+The length of longwaves varies from around 6,000 km to 8,000 km or more. They generally move very slowly from west to east. But occasionally they will become stationary or retrograde (move east to west).
+The speed at which these large waves move should not be confused with the speed of the wind found within the waves themselves (!). For example, there can be a strong jet stream wind of 185 km/h moving through the longwave, but the position of longwave itself move may very little. The wave itself is not moving at 185 km/h, just the wind within. Rossby waves help to transfer heat from the tropics toward the poles and cold air toward the tropics trying to return the atmosphere to balance. They also help locate the jet stream and mark out the track of low-pressure surface systems. The number of longwaves at any one time varies from three to seven though it is typically four or five.
+Their slow-motion often results in reasonably long persistent weather patterns. For example, locations between the trough and the downstream ridge can experience extended periods with rain or snow while at the same time 3,000 - 4,000 km upwind and/or downwind the weather is very dry. This often can lead to a misconception where one assumes the weather he or she experiences is typical everywhere. That is simply not true. If one place is receiving cooler weather and/or flooding rains over a period of several days to weeks, then there are some other places where the weather is warm and dry for about the same period. It all depends upon the location of the longwaves relative to the observer.
+
+**Shortwaves**
+
+A "piece of energy", "vort max" (or "vorticity maximum"), "pocket of cold air" (or "pocket of energy"), "upper-level disturbance", "upper-level energy", or just "shortwave" are some of the slang terms for waves with a length of fewer than 6,000 km.
+They are embedded within the longwaves. Unlike the slow movement of longwaves, shortwaves move east (downstream) on average of 37 km/h in summer and 55 km/h in winter. This motion causes longwaves to distort and change shape such as deepening longwave troughs and flattening longwave ridges. Due to their variety of sizes, it can be challenging to discern shortwave embedded within a longwave by looking at a static map. One often needs to see looping images of the wave patterns to determine the difference between them.
+
+```{r Fig632b, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure632b.png'))
+```
+
+### Ingredients for a Developing Mid-latitude Cyclone (upper air support)
+
+**The roles of converging and diverging air**
+
+H and L pressure zones have a complex 3D shape. If they would form a perfect vertical column, parallel gradient winds aloft, then a low-pressure zone would dissipate itself due to convergence of air at the surface, increasing the pressure. Also, a H pressure zone would dissipate due to divergence near the surface. However, the complex 3D structure causes divergence and convergence aloft, which is very important to maintain and strengthen H and L pressure zones. 
+The divergence at higher altitudes can have a strengthening effect on low-pressure zones near the surface; the air is "sucked up" vertically. Divergence at higher altitudes is created by diverging isobars/contour lines. 
+
+```{r Fig633a, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure633a.png'))
+```
+
+**Upper air support: baroclinic instability**
+
+In the initial stage of development, a weak low-level temperature wave is seen to form downstream of an upper-level shortwave trough. As the surface cyclone develops **cold air advection** to the west of the surface cyclone reduces the thickness of the atmospheric layer between 1000 hPa and 500hPa and deepens the upper-level trough. Conversely, **warm air advection** to the east of the surface cyclone increases the 1000-500 hPa thickness and intensifies the upper-level ridge. Thus, **differential temperature advection** to the west and east of the surface cyclone amplifies the upper-level wave.
+As the upper-level wave amplifies positive differential vorticity advection downstream of the upper-level trough forces ascent above the surface cyclone. The resulting lower-tropospheric vortex stretching intensifies the surface cyclone. Increased low-level wind speeds lead to an amplification of the low-level temperature wave and hence stronger low-level temperature advection which in turn amplifies the upper-level wave. Therefore, positive feedback between the processes occurring at upper and lower-levels occurs.
+As the cyclone develops, the upper-level low-pressure region moves towards the surface low. In the mature stage, the upper-level low is located directly above the surface low, producing a vertically stacked cold-core system. The alignment of the surface and upper-level cyclones means that there is no longer a positive feedback effect between the processes occurring at upper and lower-levels and the cyclone decays (not shown).
+
+```{r Fig633b, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure633b.png'))
+```
+
+**The role of Jet Stream**
+
+A jet stream has formed in the trough of the upper-level height contours, where the pressure gradient is tight. The developing surface cyclone is located below an area of **strong divergence**.
+
+```{r Fig633c, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure633c.png'))
+```
+
+**Conveyor Belt**
+
+```{r Fig633d, fig.cap='Horizontal composites at the time of maximum intensity. (a) Pressure on 285 K isentropic surface (solid, at 900, 800, 700 and 600 hPa); system relative wind vectors on 285 K isentropic surface; mid-level cloud cover, MCC (filled, >50%); overlaid with surface fronts. Bold green dashed arrow indicates cold conveyor belt flow. (b) Pressure on 300 K isentropic surface (solid, at 700, 600, 500 and 400hPa); system relative wind vectors on 300 K isentropic surface; high-level cloud cover, HCC (filled, >50%); overlaid with surface fronts. Bold arrows indicate warm conveyor belt flows (WCB1, solid black, and WCB2, dashed black) and dry intrusion (solid green). (c) Vertical cross-section along the warm conveyor belt transect. Contours are system relative u-component of the wind (solid, at -35, -30 and -25 ms-1); θe (dashed contours, between 270 and 320 K), vertical velocity (dotted contours, at -0.6, -0.5, -0.4 and -0.3 hPa s-1); relative humidity, RH (filled, >55%).',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure633d.png'))
+```
+
+This Figure shows the main airflows, namely the warm and cold conveyor belts and dry intrusion are subjectively identified at the time of maximum intensity by analysing system relative flow on isentropic surfaces.
+At the time of maximum intensity, a region of high cloud cover can be seen wrapping cyclonically around the low-pressure center (figure b), associated with the warm conveyor belt (Harrold, 1973). The warm conveyor belt is a warm, moist synoptic-scale flow of air which advances polewards ahead of the cold front and then splits into two airflows. One airflow (WCB1) ascends along the axis of the cold front and then turns anticyclonically, broadening the polar front cloud band at upper-levels. The second airflow (WCB2) peels off cyclonically from the warm conveyor belt and ascends to form the upper part of a cloud head which emerges from the polar front cloud band. The cloud head is also enhanced by a flow of air coming from the cold conveyor belt. The cold conveyor belt (Carlson, 1980) is a flow of air characterised by lower temperatures that flow rearwards, relative to the advancing system, ahead of the warm front and ascend to form the lower part of the cloud head (Figure a). Also identified is a cloud-free dry intrusion (Young et al., 1987) which penetrates the frontal cloud separating the emerging cloud head from the polar front cloud band to form a comma pattern (figure b). This dry intrusion is caused by a stream of dry air from the lower stratosphere descending through a tropopause fold, into the center of the cyclone. As the cyclone develops further, the cloud head wraps around the cyclone center and begins to dissipate (not shown).
+Figure (c) shows a vertical composite plot along the warm conveyor belt transect. The θe contours are vertically inclined to rise from the warm sector to the south of the cyclone, northwards over the surface warm front. The region of maximum ascent and highest relative humidity are found close to the cyclone center between the 285 and 300 K θe surfaces. The cold conveyor belt flow is identified behind the warm surface front flowing rearwards relative to the propagation direction of the cyclone.
+
+### Vorticity
+
+The vertical motion patterns associated with synoptic-scale divergence/convergence are directly connected both with development of surface pressure systems and the development of the vertical motion fields that lead to the creation of cloud/precipitation systems in association with the surface lows.
+
+**What is vorticity?**
+
+Vorticity is a clockwise or counterclockwise spin in the troposphere. 
+
+**The vorticity of a spinning planet (Earth's vorticity)**
+
+The Earth's rotation creates vorticity, which is a maximum at the poles and zero at the equator.
+**Planetary vorticity** is the spin of an object-based upon the rotation of the planet. Except for someone located along the equator, the Earth's rotation imputes planetary vorticity to everyone and everything.
+At the poles, this vorticity is at its maximum with the vorticity decrease as one move toward the equator. Besides, this rotation is cyclonic (counterclockwise in the Northern Hemisphere and clockwise in the Southern Hemisphere). As a result, a parcel of air that is moving toward a pole will undergo an increase in planetary vorticity (spin faster) while air moving toward the equator will see a decrease in planetary vorticity (spin slower).
+Now, going back to the tilt of the trough, the faster a parcel moves north, the faster the vorticity increases. This helps explain why negatively tilted trough is more likely to cause the development of severe weather as compared to positively tiled troughs, where the increase in planetary vorticity is slower.
+
+```{r Fig634a, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure634a.png'))
+```
+
+**Relative vorticity** is the rotation of an object-based upon its location in an air current. It consists of two components; curvature of the airflow and the difference in the speed of the wind from one side of the parcel to the other.
+
+**Vorticity due to curvature**
+
+Parcels acquire relative vorticity when they encounter curved flow. For the Northern Hemisphere atmosphere, parcels of air will have cyclonic (counterclockwise) spin in troughs and anti-cyclonic (clockwise) spin in ridges.
+
+```{r Fig634b, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure634b.png'))
+```
+
+**Relative vorticity due to horizontal wind shear**
+
+Parcels acquire relative vorticity when they encounter horizontal differences in wind speeds. For the Northern Hemisphere atmosphere, the same holds. A parcel located on the north side of the jet stream will experience increased counterclockwise flow and therefore, have increased vorticity. If that same parcel were located south of the jet stream, then the spin would be clockwise for a decrease in vorticity.
+
+```{r Fig634c, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure634c.png'))
+```
+
+**Absolute Vorticity**
+
+**Absolute vorticity** is the sum of the Earth's vorticity and relative vorticity. The Earth's vorticity is larger, so even around a high the absolute vorticity is positive.
+
+* The maximum vorticity occurs at the low trough in-between regions of convergence and divergence.
+* Vorticity increases in the converging region and decreases in the diverging region.
+
+```{r Fig634d, fig.cap=' ',fig.align='default',echo=FALSE,fig.show='',out.width='80%'}
+knitr::include_graphics(c('figures/Figure634d.png'))
+```
